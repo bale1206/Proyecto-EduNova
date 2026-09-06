@@ -1,0 +1,102 @@
+.edunova_span {
+  color: #CDFFD8;
+  font-size: 48px;
+  font-family: Krona One;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.edunova {
+  width: 283px;
+  height: 58px;
+  left: 53px;
+  top: 173px;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.bienvenidoaa_span {
+  color: black;
+  font-size: 36px;
+  font-family: Mako;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.bienvenidoa-a {
+  width: 283px;
+  height: 58px;
+  left: 54px;
+  top: 87px;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.insertaresloganenunfuturo_span {
+  color: black;
+  font-size: 16px;
+  font-family: League Spartan;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.insertar-eslogan-en-un-futuro {
+  width: 196px;
+  height: 14px;
+  left: 97px;
+  top: 586px;
+  position: absolute;
+  text-align: center;
+}
+
+.rectangle-4 {
+  width: 161px;
+  height: 51px;
+  left: 114px;
+  top: 683px;
+  position: absolute;
+  background: #CDF4FF;
+  border-radius: 13px;
+}
+
+.comencmos_span {
+  color: black;
+  font-size: 24px;
+  font-family: League Spartan;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.comencmos {
+  width: 147px;
+  height: 14px;
+  left: 122px;
+  top: 701px;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.edunova---logo-2 {
+  width: 280px;
+  height: 230px;
+  left: 54px;
+  top: 289px;
+  position: absolute;
+}
+
+.vista-bienvenida {
+  width: 390px;
+  height: 844px;
+  position: relative;
+  background: white;
+  overflow: hidden;
+}
