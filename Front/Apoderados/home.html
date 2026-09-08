@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduNova - Portal Familias</title>
+<!-- Plus Jakarta Sans Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#001b3c",
+            "surface": "#f9f9ff",
+            "on-secondary-fixed-variant": "#00513d",
+            "surface-variant": "#d8e3fb",
+            "primary-container": "#2b75cd",
+            "surface-container-high": "#dee8ff",
+            "on-tertiary-fixed": "#001c3a",
+            "inverse-surface": "#263143",
+            "surface-container-low": "#f0f3ff",
+            "surface-tint": "#005eb3",
+            "surface-container": "#e7eeff",
+            "on-primary-fixed-variant": "#004689",
+            "on-secondary": "#ffffff",
+            "background": "#f9f9ff",
+            "inverse-on-surface": "#ecf1ff",
+            "secondary-fixed-dim": "#7ed7b7",
+            "primary": "#005cae",
+            "tertiary": "#2b5d99",
+            "primary-fixed": "#d5e3ff",
+            "surface-container-highest": "#d8e3fb",
+            "surface-dim": "#cfdaf2",
+            "on-primary": "#ffffff",
+            "outline-variant": "#c1c6d4",
+            "tertiary-container": "#4876b4",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#9af4d3",
+            "inverse-primary": "#a7c8ff",
+            "on-background": "#111c2d",
+            "error": "#ba1a1a",
+            "secondary-container": "#97f1d0",
+            "on-primary-container": "#fefcff",
+            "on-secondary-container": "#007056",
+            "tertiary-fixed-dim": "#a5c8ff",
+            "primary-fixed-dim": "#a7c8ff",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed": "#002117",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#fefcff",
+            "surface-bright": "#f9f9ff",
+            "outline": "#727783",
+            "on-surface-variant": "#414752",
+            "on-tertiary-fixed-variant": "#0b4782",
+            "tertiary-fixed": "#d4e3ff",
+            "on-surface": "#111c2d",
+            "secondary": "#006c52",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "1.25rem",
+            "space-lg": "1.5rem",
+            "space-2xs": "0.25rem",
+            "margin-desktop": "3rem",
+            "space-sm": "0.75rem",
+            "space-xs": "0.5rem",
+            "space-3xl": "3.5rem",
+            "gutter": "1rem",
+            "space-2xl": "2.5rem",
+            "margin-tablet": "2rem",
+            "space-md": "1rem",
+            "space-xl": "2rem"
+          },
+          "fontFamily": {
+            "body-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "label-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "body-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "label-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "display-mobile": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "display": [
+              "Plus Jakarta Sans"
+            ],
+            "body-md": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-md": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-lg-mobile": [
+              "Plus Jakarta Sans"
+            ],
+            "label-md": [
+              "Plus Jakarta Sans"
+            ]
+          },
+          "fontSize": {
+            "body-lg": [
+              "17px",
+              {
+                "lineHeight": "26px",
+                "fontWeight": "400"
+              }
+            ],
+            "label-lg": [
+              "15px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-sm": [
+              "18px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "600"
+              }
+            ],
+            "body-sm": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "400"
+              }
+            ],
+            "label-sm": [
+              "11px",
+              {
+                "lineHeight": "14px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "600"
+              }
+            ],
+            "display-mobile": [
+              "28px",
+              {
+                "lineHeight": "36px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-lg": [
+              "30px",
+              {
+                "lineHeight": "38px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "600"
+              }
+            ],
+            "display": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "body-md": [
+              "15px",
+              {
+                "lineHeight": "22px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-md": [
+              "22px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-lg-mobile": [
+              "24px",
+              {
+                "lineHeight": "32px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }
+            ],
+            "label-md": [
+              "13px",
+              {
+                "lineHeight": "16px",
+                "fontWeight": "600"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #f9f9ff;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .soft-shadow {
+      box-shadow: 0 4px 20px -2px rgba(75, 142, 232, 0.07), 0 2px 6px -1px rgba(30, 41, 59, 0.03);
+    }
+    .soft-ring {
+      box-shadow: inset 0 0 0 1px rgba(75, 142, 232, 0.08);
+    }
+    .safe-pb {
+      padding-bottom: env(safe-area-inset-bottom, 20px);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex justify-center selection:bg-surface-container selection:text-primary">
+<!-- Mobile View Container max-w-md -->
+<div class="w-full max-w-md bg-background min-h-screen flex flex-col relative pb-32">
+<!-- TopAppBar (Mapped directly from Shared Component JSON) -->
+<header class="bg-surface dark:bg-surface flex justify-between items-center w-full px-gutter max-w-md mx-auto h-16 sticky top-0 z-40">
+<div class="flex items-center gap-space-xs">
+<button aria-label="Atrás" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors active:scale-95 duration-150 text-primary" type="button">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<img alt="EduNova Logo" class="w-7 h-7 object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYib7xrsrZjp4mbOAsUvf-6iEhHDdZ-wo8ezqsD1n7jD52oowNZuunFJZmOoBoFbg1L536yZLHbT53f5odXnjENzkFsl8AyEI7IlOA8tMVumXdBXldt_xBgZHqdKcIXmgeVxSZ98rjCViFyawp5iiak5Q0V1MbHuxRwF-dh-Hc1EbJttLK5K9_8BxEIre8w9cN2hQqWFR1oMEM_2lUJok_WOGVS_uSD0-6DXgpfLGOAJeeV4DNqDgxW4QI8iv08a6zug"/>
+<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-inverse-primary tracking-tight">EduNova</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Ayuda y soporte" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors active:scale-95 duration-150 text-primary" type="button">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</header>
+<!-- Main Content Stream -->
+<main class="flex-1 px-margin-mobile flex flex-col gap-space-lg pt-space-xs">
+<!-- User Warm Welcome & Subtitle -->
+<section class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">
+              Hola, Camila
+            </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Familia Silva Contreras • Colegio San Gabriel
+            </p>
+</div>
+<span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="verified_user">verified_user</span>
+</span>
+</div>
+</section>
+<!-- Active Student Selector Card (Soft Organic Modernism) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md soft-shadow soft-ring flex items-center justify-between relative overflow-hidden">
+<div class="flex items-center gap-space-md">
+<div class="relative w-12 h-12 flex-shrink-0">
+<img alt="Mateo Silva Contreras" class="w-12 h-12 rounded-full object-cover ring-2 ring-surface-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1Uym4VkUjXkUS-FcRslrC3yLVtxIAPrJPao3txtmxkCJqL4ESOZRUnkhCqZPYgaiRW57IiVW7f85eJptn0y6UC-Kl2RL02Rq9xjJiXofgEkt1xLUSpuiY719XUWBIOWizJlvLlB1dFlAh57RwY5CPFHX_YgCr4fy9y3Y-Wmp6Ibh-5cO3L-wP0NZWgHSMZ_uSKAs587vtnqKLVPEXm_4vP0YKunl-w_U2MkGxhL2GI4_Vut85IWmig-d3o"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-secondary rounded-full ring-2 ring-white" title="Presente"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Mateo Silva</span>
+<span class="bg-surface-container px-2 py-0.5 rounded-full text-label-sm font-label-sm text-primary">1° Básico B</span>
+</div>
+<div class="flex items-center gap-1 text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[15px]" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">Presente hoy en sala • 08:15 hrs</span>
+</div>
+</div>
+</div>
+<button aria-label="Cambiar de hijo" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined" data-icon="unfold_more">unfold_more</span>
+</button>
+</section>
+<!-- Quick Action Shortcuts (Pills / Quiet entry points) -->
+<section class="grid grid-cols-2 gap-space-sm">
+<button class="bg-surface-container-low hover:bg-surface-container transition-all active:scale-95 duration-150 rounded-2xl p-space-md text-left flex flex-col justify-between h-28 soft-shadow" onclick="document.getElementById('modal-justificacion').classList.remove('hidden')" type="button">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[22px]" data-icon="assignment_late">assignment_late</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-bold leading-snug">Justificar inasistencia</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Subir certificado médico</span>
+</div>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container transition-all active:scale-95 duration-150 rounded-2xl p-space-md text-left flex flex-col justify-between h-28 soft-shadow" type="button">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-xs">
+<span class="material-symbols-outlined text-[22px]" data-icon="departure_board">departure_board</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-bold leading-snug">Avisar retiro temprano</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Salida antes de las 15:30</span>
+</div>
+</button>
+</section>
+<!-- Institutional & Teacher Messages (Stress-Free, Protected) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Comunicaciones del curso</h2>
+<span class="bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm px-2.5 py-0.5 rounded-full font-semibold">1 mensaje nuevo</span>
+</div>
+<!-- Working hours reassurance pill -->
+<div class="flex items-center gap-2 bg-surface-container-low px-3.5 py-2 rounded-xl text-on-surface-variant">
+<span class="material-symbols-outlined text-[17px] text-tertiary" data-icon="schedule">schedule</span>
+<span class="font-label-sm text-label-sm text-[12px]">Horario hábil escolar • Respuestas entre 08:00 y 17:30 hrs</span>
+</div>
+<div class="flex flex-col gap-space-sm mt-1">
+<!-- Card 1: Direct Teacher Message -->
+<article class="bg-surface-container-lowest rounded-2xl p-space-md soft-shadow soft-ring border-l-4 border-primary">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary font-bold text-label-md">
+                  PM
+                </div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">Prof. Marcela Venegas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Profesora Jefe 1° Básico</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hace 2h</span>
+</div>
+<div class="mt-3">
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Material de lectura para el viernes</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 line-clamp-2">
+                Estimada Camila: solicitamos llevar impreso el cuento "El ratón y el viento" para la actividad de comprensión lectora.
+              </p>
+</div>
+<div class="mt-3 pt-2.5 flex items-center justify-between border-t border-surface-container-low">
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="attach_file">attach_file</span> 1 adjunto (PDF, 420 KB)
+              </span>
+<button class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-3.5 py-1.5 rounded-full hover:bg-primary transition-all active:scale-95 duration-150 font-semibold shadow-xs" type="button">
+                Ver y responder
+              </button>
+</div>
+</article>
+<!-- Card 2: Institutional Circular -->
+<article class="bg-surface-container-lowest rounded-2xl p-space-md soft-shadow soft-ring opacity-95">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-label-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="campaign">campaign</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">Dirección Académica</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comunicado Oficial #14</p>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="done_all">done_all</span>
+<span>Leído</span>
+</div>
+</div>
+<div class="mt-2.5">
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Calendario de reuniones de apoderados mayo</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                La reunión del 1° Básico se efectuará el jueves 9 de mayo a las 18:30 hrs de manera presencial.
+              </p>
+</div>
+</article>
+</div>
+</section>
+<!-- Calendar & Next Events Preview (Airy Bento Tile) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md soft-shadow soft-ring flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="calendar_month">calendar_month</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Próximos eventos y fechas</h2>
+</div>
+<button class="text-primary font-label-sm text-label-sm font-semibold hover:underline" type="button">Ver mes</button>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Event 1 -->
+<div class="flex items-center gap-3 p-2.5 rounded-xl bg-surface-container-low/70">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex flex-col items-center justify-center text-primary flex-shrink-0">
+<span class="text-label-sm font-label-sm uppercase font-bold text-[10px] leading-tight">Vie</span>
+<span class="font-headline-sm text-headline-sm font-extrabold leading-tight">25</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Taller creativo de primavera</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Traer delantal de plástico y témperas</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Event 2 -->
+<div class="flex items-center gap-3 p-2.5 rounded-xl bg-surface-container-low/70">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex flex-col items-center justify-center text-primary flex-shrink-0">
+<span class="text-label-sm font-label-sm uppercase font-bold text-[10px] leading-tight">Lun</span>
+<span class="font-headline-sm text-headline-sm font-extrabold leading-tight">28</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Control de lectura formativo</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cuento "La montaña que aprendió a volar"</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Cafeteria & Nutrition daily glance -->
+<div class="mt-1 pt-3 border-t border-surface-container-low flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="restaurant">restaurant</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Almuerzo del día</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Crema de zapallo y pechuga al horno</span>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container text-label-sm font-label-sm px-2.5 py-1 rounded-full font-medium">Equilibrado</span>
+</div>
+</section>
+<!-- Trust Badge & Support Message -->
+<section class="bg-surface-container-low/60 rounded-2xl p-space-md flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Canal seguro y protegido</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">
+            Las justificaciones se procesan automáticamente con Inspectoría y avisan a su profesor jefe.
+          </span>
+</div>
+</section>
+</main>
+<!-- Interactive Bottom Sheet Modal: Justificar Inasistencia (Clean & Tranquil) -->
+<div class="hidden fixed inset-0 z-50 flex items-end justify-center bg-inverse-surface/30 backdrop-blur-sm transition-opacity" id="modal-justificacion">
+<div class="bg-surface-container-lowest w-full max-w-md rounded-t-xl p-space-lg soft-shadow flex flex-col gap-space-md animate-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="medical_information">medical_information</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Justificar inasistencia</h3>
+</div>
+<button aria-label="Cerrar modal" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container text-on-surface-variant" onclick="document.getElementById('modal-justificacion').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Complete los datos para justificar la ausencia de <strong>Mateo Silva</strong>. La información quedará registrada en Inspectoría general.
+        </p>
+<!-- Form fields -->
+<div class="flex flex-col gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold block mb-1">Motivo principal</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="border border-primary bg-primary-fixed/30 text-primary py-2 px-2 rounded-xl text-label-sm font-label-sm text-center font-bold" type="button">Salud / Médico</button>
+<button class="border border-outline-variant hover:border-primary py-2 px-2 rounded-xl text-label-sm font-label-sm text-center text-on-surface-variant font-medium" type="button">Familiar</button>
+<button class="border border-outline-variant hover:border-primary py-2 px-2 rounded-xl text-label-sm font-label-sm text-center text-on-surface-variant font-medium" type="button">Trámite</button>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold block mb-1">Fecha o rango</label>
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md">Hoy, 24 de Abril de 2025</span>
+</div>
+<span class="text-primary font-label-sm text-label-sm font-semibold cursor-pointer">Modificar</span>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold block mb-1">Certificado o comprobante (Opcional)</label>
+<div class="border-2 border-dashed border-outline-variant hover:border-primary/60 rounded-2xl p-4 flex flex-col items-center justify-center gap-1.5 cursor-pointer bg-surface/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="cloud_upload">cloud_upload</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Toca para subir foto o PDF</span>
+<span class="font-body-sm text-body-sm text-[11px] text-on-surface-variant">Archivos PDF, JPG o PNG hasta 10MB</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 py-3 px-4 rounded-full border border-outline-variant font-label-md text-label-md text-on-surface font-medium hover:bg-surface-container-low transition-colors" onclick="document.getElementById('modal-justificacion').classList.add('hidden')" type="button">
+            Cancelar
+          </button>
+<button class="flex-1 py-3 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-md hover:bg-primary-container active:scale-95 transition-all" onclick="document.getElementById('modal-justificacion').classList.add('hidden')" type="button">
+            Enviar justificación
+          </button>
+</div>
+</div>
+</div>
+<!-- BottomNavBar (Execution of Shared Component JSON) -->
+<!-- Active state logic: Home is active -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin-mobile py-space-xs max-w-md mx-auto pb-safe bg-surface-container-lowest dark:bg-inverse-surface shadow-sm rounded-t-lg">
+<!-- Tab 1: Home (Active destination from JSON) -->
+<button aria-current="page" class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-space-md py-space-xs transition-transform duration-150 active:scale-95" type="button">
+<span class="material-symbols-outlined" data-icon="school" data-weight="fill" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="text-label-sm font-label-sm mt-0.5 font-bold">Home</span>
+</button>
+<!-- Tab 2: Updates (Inactive destination from JSON) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-space-md py-space-xs transition-transform duration-150 hover:bg-surface-container-low active:scale-95 rounded-full relative" type="button">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="text-label-sm font-label-sm mt-0.5">Updates</span>
+<span class="absolute top-1 right-3 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<!-- Tab 3: Support (Inactive destination from JSON) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-space-md py-space-xs transition-transform duration-150 hover:bg-surface-container-low active:scale-95 rounded-full" type="button">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="text-label-sm font-label-sm mt-0.5">Support</span>
+</button>
+</nav>
+</div>
+</body></html>

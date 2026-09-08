@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bandeja de Mensajería Institucional - EduNova</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with forms & container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config verbatim matching Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#ffffff",
+            "inverse-primary": "#a7c8ff",
+            "on-primary": "#ffffff",
+            "outline-variant": "#c1c6d4",
+            "inverse-surface": "#263143",
+            "tertiary-container": "#4876b4",
+            "tertiary-fixed-dim": "#a5c8ff",
+            "on-secondary-fixed-variant": "#00513d",
+            "surface-container": "#e7eeff",
+            "error-container": "#ffdad6",
+            "outline": "#727783",
+            "secondary-fixed-dim": "#7ed7b7",
+            "inverse-on-surface": "#ecf1ff",
+            "on-tertiary-fixed": "#001c3a",
+            "on-surface": "#111c2d",
+            "tertiary-fixed": "#d4e3ff",
+            "on-primary-fixed": "#001b3c",
+            "surface-container-low": "#f0f3ff",
+            "surface-container-highest": "#d8e3fb",
+            "on-surface-variant": "#414752",
+            "on-background": "#111c2d",
+            "on-tertiary-container": "#fefcff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#0b4782",
+            "primary-fixed": "#d5e3ff",
+            "secondary-container": "#97f1d0",
+            "primary-fixed-dim": "#a7c8ff",
+            "on-secondary": "#ffffff",
+            "primary": "#005cae",
+            "on-secondary-container": "#007056",
+            "surface-variant": "#d8e3fb",
+            "surface-bright": "#f9f9ff",
+            "secondary-fixed": "#9af4d3",
+            "primary-container": "#2b75cd",
+            "on-primary-fixed-variant": "#004689",
+            "surface-container-high": "#dee8ff",
+            "background": "#f9f9ff",
+            "on-tertiary": "#ffffff",
+            "surface-dim": "#cfdaf2",
+            "surface-tint": "#005eb3",
+            "secondary": "#006c52",
+            "tertiary": "#2b5d99",
+            "on-error-container": "#93000a",
+            "on-primary-container": "#fefcff",
+            "surface": "#f9f9ff",
+            "on-secondary-fixed": "#002117",
+            "error": "#ba1a1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-3xl": "3.5rem",
+            "space-xl": "2rem",
+            "space-2xl": "2.5rem",
+            "margin-tablet": "2rem",
+            "space-md": "1rem",
+            "margin-desktop": "3rem",
+            "gutter": "1rem",
+            "space-xs": "0.5rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.75rem",
+            "space-2xs": "0.25rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "display-mobile": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .ambient-shadow {
+      box-shadow: 0 4px 20px -2px rgba(75, 142, 232, 0.06), 0 2px 6px -1px rgba(30, 41, 59, 0.04);
+    }
+    .ambient-shadow-float {
+      box-shadow: 0 12px 32px -4px rgba(75, 142, 232, 0.12), 0 4px 12px -2px rgba(30, 41, 59, 0.03);
+    }
+    .subtle-ring {
+      box-shadow: inset 0 0 0 1px rgba(124, 213, 181, 0.25);
+    }
+    .pb-safe {
+      padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 4.5rem);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col justify-between selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Mobile Frame Container (Max-w-md centered for authentic mobile UX) -->
+<div class="w-full max-w-md mx-auto min-h-screen flex flex-col relative bg-background pb-safe">
+<!-- Top Navigation & Brand Header (Shared Component: TopAppBar aligned) -->
+<header class="bg-surface dark:bg-surface w-full px-gutter max-w-md mx-auto h-16 flex justify-between items-center sticky top-0 z-30">
+<!-- Leading Back Action -->
+<button aria-label="Volver a Ficha Alumno" class="flex items-center gap-space-2xs text-primary dark:text-inverse-primary hover:bg-surface-container transition-colors active:scale-95 duration-150 rounded-full px-space-xs py-space-2xs" onclick="window.history.back()">
+<span class="material-symbols-outlined text-primary text-[22px]">arrow_back</span>
+<span class="font-label-sm text-label-sm hidden sm:inline-block text-primary">Ficha</span>
+</button>
+<!-- Brand Center Anchor with provided Logo -->
+<div class="flex items-center gap-space-xs">
+<img alt="EduNova Logo" class="w-8 h-8 rounded-full object-contain bg-surface-container-lowest p-0.5 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDATHCjtJb3KnH6x3nzg4vaWoXwomKns5lS9JQlrUbYSHOTa4yaBC63IvuAlpyQkACVhVFdBfrpft-9FgjiRYASGa6yAge8Kwz74ygiFeQqA0YGrX8v-lcZO7eoytPw__dIYLhyWVm9xMa0UiKtogjPHdCpNAuuYpqHPn83VWpG-xZkW4xl6nLwHcxUpVY0SqX7l8BTTJTD5EDKwLsX0Iav2VWWxwNJvoXPhlFh5TKU719tgPjMmmrJpSNi2OWgXy3RnA"/>
+<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-inverse-primary tracking-tight">EduNova</span>
+</div>
+<!-- Trailing Help / Info -->
+<button aria-label="Ayuda" class="w-10 h-10 flex items-center justify-center rounded-full text-primary dark:text-inverse-primary hover:bg-surface-container dark:hover:bg-inverse-surface transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[22px]">help_outline</span>
+</button>
+</header>
+<!-- Context Title & Operational Schedule Banner -->
+<section class="px-margin-mobile pt-space-xs pb-space-sm">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary">Comunicaciones Colegio San Gabriel</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">Mensajes Institucionales</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">forum</span>
+</div>
+</div>
+<!-- Health/Schedule Guard Chip -->
+<div class="mt-space-2xs inline-flex items-center gap-space-xs bg-surface-container-low border border-outline-variant/30 rounded-full px-space-md py-space-2xs self-start">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">
+            Horario hábil: <strong class="text-secondary font-semibold">08:00 a 17:30 hrs</strong>
+</span>
+<span class="material-symbols-outlined text-outline text-[16px]">schedule</span>
+</div>
+</div>
+</section>
+<!-- Navigation Tabs (Segmented Control) -->
+<nav aria-label="Filtro de mensajería" class="px-margin-mobile py-space-2xs">
+<div class="flex items-center gap-space-2xs bg-surface-container-low p-1 rounded-full">
+<!-- Active Tab: Recibidos -->
+<button class="flex-1 flex items-center justify-center gap-space-2xs bg-surface-container-lowest text-primary py-space-xs px-space-sm rounded-full shadow-sm font-label-md text-label-md transition-all active:scale-95">
+<span>Recibidos</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full min-w-[20px] text-center">2</span>
+</button>
+<!-- Inactive Tab: Enviados -->
+<button class="flex-1 flex items-center justify-center gap-space-2xs text-on-surface-variant hover:text-on-surface py-space-xs px-space-sm rounded-full font-label-md text-label-md transition-colors active:scale-95">
+<span>Enviados</span>
+</button>
+<!-- Inactive Tab: Comunicados Oficiales -->
+<button class="flex-1 flex items-center justify-center gap-space-2xs text-on-surface-variant hover:text-on-surface py-space-xs px-space-sm rounded-full font-label-md text-label-md transition-colors active:scale-95 text-center truncate">
+<span class="truncate">Comunicados</span>
+</button>
+</div>
+</nav>
+<!-- Primary Action: Redactar mensaje institucional -->
+<div class="px-margin-mobile pt-space-sm pb-space-xs">
+<button class="w-full h-[52px] bg-primary text-on-primary rounded-full font-label-lg text-label-lg flex items-center justify-center gap-space-xs ambient-shadow active:scale-[0.98] transition-transform duration-150">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span>Redactar mensaje institucional</span>
+</button>
+</div>
+<!-- Messages Feed / Bento-style Calm Cards -->
+<main class="px-margin-mobile flex-1 flex flex-col gap-space-md pt-space-xs">
+<!-- Mensaje 1: Apoderada Camila Contreras -->
+<article class="bg-surface-container-lowest rounded-lg p-space-md ambient-shadow border border-surface-container-high relative overflow-hidden transition-all hover:bg-surface-container-low/40">
+<!-- Accent indicator strip -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary rounded-l-lg"></div>
+<div class="flex items-start justify-between gap-space-sm pl-space-2xs">
+<!-- Avatar + Remitente Info -->
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary font-bold font-label-lg text-label-lg">
+              CC
+            </div>
+<div>
+<h2 class="font-label-lg text-label-lg text-on-surface">Camila Contreras</h2>
+<p class="font-body-sm text-body-sm text-tertiary">Madre de Mateo Silva · 1° Básico B</p>
+</div>
+</div>
+<!-- Time indicator -->
+<span class="font-label-sm text-label-sm text-outline">Ayer 16:40</span>
+</div>
+<!-- Subject & Snippet -->
+<div class="mt-space-sm pl-space-2xs">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-1.5">
+<span>Consulta por material de lectura</span>
+</h3>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            "Estimada profesora: junto con saludarle, quisiera confirmar si el libro 'El oso que leía cuentos' lo trabajaremos en fotocopias o impreso..."
+          </p>
+</div>
+<!-- Badges & Action Response Footer -->
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between pl-space-2xs">
+<div class="flex items-center gap-space-2xs flex-wrap">
+<!-- Chip: Horario Hábil -->
+<span class="inline-flex items-center gap-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">cloud_download</span>
+<span>Horario hábil</span>
+</span>
+<!-- Chip: Respondido -->
+<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Respondido</span>
+</span>
+</div>
+<button class="text-primary font-label-sm text-label-sm flex items-center gap-0.5 hover:underline active:scale-95">
+<span>Ver hilo</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Mensaje 2: Apoderado Jorge Rojas -->
+<article class="bg-surface-container-lowest rounded-lg p-space-md ambient-shadow border border-secondary/30 relative overflow-hidden bg-gradient-to-br from-surface-container-lowest to-surface-container-low/30">
+<!-- Attention Indicator Strip -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container rounded-l-lg"></div>
+<div class="flex items-start justify-between gap-space-sm pl-space-2xs">
+<!-- Avatar + Remitente Info -->
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold font-label-lg text-label-lg">
+              JR
+            </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h2 class="font-label-lg text-label-lg text-on-surface">Jorge Rojas</h2>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Padre de Valentina Rojas · 1° Básico B</p>
+</div>
+</div>
+<!-- Time indicator -->
+<span class="font-label-sm text-label-sm text-primary font-semibold">Hoy 10:15</span>
+</div>
+<!-- Subject & Snippet -->
+<div class="mt-space-sm pl-space-2xs">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-1.5">
+<span>Aviso de retiro temprano médica</span>
+<span class="material-symbols-outlined text-primary text-[18px]">medical_services</span>
+</h3>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">
+            "Buenos días. Informo que Valentina será retirada hoy a las 12:30 hrs por su abuela Marta debido a hora con especialista dental. Adjunto certificado..."
+          </p>
+</div>
+<!-- Badges & Action Response Footer -->
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between pl-space-2xs">
+<div class="flex items-center gap-space-2xs">
+<!-- Chip: Pendiente de confirmación -->
+<span class="inline-flex items-center gap-1 bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]">pending_actions</span>
+<span>Pendiente de confirmación</span>
+</span>
+</div>
+<button class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-sm py-1.5 rounded-full flex items-center gap-1 active:scale-95 transition-transform font-semibold">
+<span class="material-symbols-outlined text-[16px]">reply</span>
+<span>Responder</span>
+</button>
+</div>
+</article>
+<!-- Mensaje 3: Inspectoría General / Dirección -->
+<article class="bg-surface-container-lowest rounded-lg p-space-md ambient-shadow border border-surface-container-high relative overflow-hidden transition-all hover:bg-surface-container-low/40">
+<!-- Institutional Strip -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container rounded-l-lg"></div>
+<div class="flex items-start justify-between gap-space-sm pl-space-2xs">
+<!-- Avatar + Remitente Info -->
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">corporate_fare</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h2 class="font-label-lg text-label-lg text-on-surface">Inspectoría General</h2>
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Dirección Académica</p>
+</div>
+</div>
+<!-- Time indicator -->
+<span class="font-label-sm text-label-sm text-outline">Lun 09:00</span>
+</div>
+<!-- Subject & Snippet -->
+<div class="mt-space-sm pl-space-2xs">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">
+            Recordatorio: Consejo de Profesores jueves
+          </h3>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">
+            "Estimado cuerpo docente: Recordamos que este jueves 24 se llevará a cabo la sesión mensual de evaluación primer ciclo en la sala multiuso..."
+          </p>
+</div>
+<!-- Badges & Action Response Footer -->
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between pl-space-2xs">
+<div class="flex items-center gap-space-2xs">
+<!-- Chip: Institucional -->
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-medium">
+<span class="material-symbols-outlined text-[14px]">policy</span>
+<span>Institucional</span>
+</span>
+</div>
+<button class="text-primary font-label-sm text-label-sm flex items-center gap-0.5 hover:underline active:scale-95">
+<span>Ver detalles</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Sanctuary / Digital Well-being Banner (Mandato 5) -->
+<aside class="my-space-xs bg-surface-container-low rounded-lg p-space-md border border-secondary/20 flex gap-space-sm items-start">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-1.5">
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">EduNova protege tu descanso</h4>
+<span class="material-symbols-outlined text-secondary text-[16px]">lock_clock</span>
+</div>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Las respuestas recibidas después de las <strong>17:30 hrs</strong> se entregarán mañana a las <strong>08:00 hrs</strong> para que desconectes tranquilamente con tu familia.
+          </p>
+</div>
+</aside>
+</main>
+<!-- Bottom Navigation Bar (Shared Component strictly mapped from JSON) -->
+<!-- Destination count: 3, Labels: ["Home", "Updates", "Support"], Active: "Updates" (Intent: Mensajes Institucionales) -->
+<nav aria-label="Navegación principal" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin-mobile py-space-xs max-w-md mx-auto pb-safe bg-surface-container-lowest dark:bg-inverse-surface shadow-sm rounded-t-lg">
+<!-- Tab 1: Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-variant transition-colors active:scale-95 duration-150" href="#home">
+<span class="material-symbols-outlined text-[24px]">school</span>
+<span class="text-label-sm font-label-sm mt-0.5">Home</span>
+</a>
+<!-- Tab 2: Updates / Mensajes (Active State mapped via style_active_navigation) -->
+<a aria-current="page" class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-space-md py-space-xs active:scale-95 transition-transform duration-150 shadow-sm" href="#updates">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="text-label-sm font-label-sm mt-0.5">Updates</span>
+</a>
+<!-- Tab 3: Support (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-variant transition-colors active:scale-95 duration-150" href="#support">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+<span class="text-label-sm font-label-sm mt-0.5">Support</span>
+</a>
+</nav>
+</div>
+</body></html>

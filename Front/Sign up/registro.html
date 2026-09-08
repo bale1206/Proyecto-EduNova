@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduNova - Crea tu cuenta</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed": "#001c3a",
+            "on-primary-container": "#fefcff",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#c1c6d4",
+            "inverse-on-surface": "#ecf1ff",
+            "surface-container-highest": "#d8e3fb",
+            "surface-container-low": "#f0f3ff",
+            "surface-tint": "#005eb3",
+            "tertiary-fixed-dim": "#a5c8ff",
+            "surface-variant": "#d8e3fb",
+            "inverse-primary": "#a7c8ff",
+            "primary-container": "#2b75cd",
+            "tertiary-fixed": "#d4e3ff",
+            "secondary-container": "#97f1d0",
+            "on-secondary-container": "#007056",
+            "secondary-fixed-dim": "#7ed7b7",
+            "on-secondary-fixed-variant": "#00513d",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "on-secondary-fixed": "#002117",
+            "primary-fixed": "#d5e3ff",
+            "on-secondary": "#ffffff",
+            "on-surface": "#111c2d",
+            "surface-dim": "#cfdaf2",
+            "primary": "#005cae",
+            "on-primary": "#ffffff",
+            "tertiary": "#2b5d99",
+            "primary-fixed-dim": "#a7c8ff",
+            "on-primary-fixed": "#001b3c",
+            "on-surface-variant": "#414752",
+            "on-tertiary-container": "#fefcff",
+            "on-tertiary-fixed-variant": "#0b4782",
+            "secondary-fixed": "#9af4d3",
+            "on-primary-fixed-variant": "#004689",
+            "inverse-surface": "#263143",
+            "secondary": "#006c52",
+            "on-error-container": "#93000a",
+            "surface-container": "#e7eeff",
+            "outline": "#727783",
+            "on-tertiary": "#ffffff",
+            "surface": "#f9f9ff",
+            "background": "#f9f9ff",
+            "surface-container-high": "#dee8ff",
+            "tertiary-container": "#4876b4",
+            "on-background": "#111c2d",
+            "error-container": "#ffdad6",
+            "surface-bright": "#f9f9ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "space-2xl": "2.5rem",
+            "margin-mobile": "1.25rem",
+            "margin-tablet": "2rem",
+            "space-3xl": "3.5rem",
+            "margin-desktop": "3rem",
+            "space-xs": "0.5rem",
+            "space-2xs": "0.25rem",
+            "space-xl": "2rem"
+          },
+          "fontFamily": {
+            "label-md": [
+              "Plus Jakarta Sans"
+            ],
+            "display": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-lg-mobile": [
+              "Plus Jakarta Sans"
+            ],
+            "body-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "label-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "display-mobile": [
+              "Plus Jakarta Sans"
+            ],
+            "body-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "label-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-md": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "body-md": [
+              "Plus Jakarta Sans"
+            ]
+          },
+          "fontSize": {
+            "label-md": [
+              "13px",
+              {
+                "lineHeight": "16px",
+                "fontWeight": "600"
+              }
+            ],
+            "display": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-lg-mobile": [
+              "24px",
+              {
+                "lineHeight": "32px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }
+            ],
+            "body-sm": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "400"
+              }
+            ],
+            "label-sm": [
+              "11px",
+              {
+                "lineHeight": "14px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "600"
+              }
+            ],
+            "display-mobile": [
+              "28px",
+              {
+                "lineHeight": "36px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "700"
+              }
+            ],
+            "body-lg": [
+              "17px",
+              {
+                "lineHeight": "26px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-sm": [
+              "18px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "600"
+              }
+            ],
+            "label-lg": [
+              "15px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-md": [
+              "22px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-lg": [
+              "30px",
+              {
+                "lineHeight": "38px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "600"
+              }
+            ],
+            "body-md": [
+              "15px",
+              {
+                "lineHeight": "22px",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 22px;
+      line-height: 1;
+      display: inline-block;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Level 1 Calm Ambient Depth from Style Guidance */
+    .calm-shadow-card {
+      box-shadow: 0 4px 20px -2px rgba(75, 142, 232, 0.06), 0 2px 6px -1px rgba(30, 41, 59, 0.04);
+    }
+
+    /* Primary press physics */
+    .button-spring {
+      transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .button-spring:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen antialiased flex flex-col items-center selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Mobile Screen Container (360px - 440px) -->
+<main class="w-full max-w-md min-h-screen flex flex-col bg-background relative pb-space-2xl">
+<!-- TopAppBar Execution according to JSON specification -->
+<header class="bg-surface flex justify-between items-center w-full px-gutter max-w-md mx-auto h-16 sticky top-0 z-30 transition-colors">
+<!-- Leading Back Action -->
+<button aria-label="Volver" class="p-space-xs rounded-full text-primary hover:bg-surface-container active:scale-95 transition-transform duration-150 flex items-center justify-center" type="button">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<!-- Center Brand Identity: Logo + Name -->
+<div class="flex items-center gap-space-xs">
+<img alt="EduNova Emblem" class="w-7 h-7 object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeCmqZuuc-419xGi6x5r168V0XGN5xrl3McEIzY-zooNBqAn2BcGlmYaqWnfHE-pEzqhJBwdOJtCaWMKPDQDhRW596RIrSL-SzSqez2LdMmAYw53JNdJS1NBIHCtb5fNMHQ8QelSwYEDFKHmvUSZYx2UmBbZy2dR7Cd32YrTYHo0AHxUNz-70iBZLK309_UX14TsS__4mH5wjJ4-F1TbbnjMLIuZEzYWMLaKn_ke8SK1M7y7xP_qt3DRrYzd1sMDWmyw"/>
+<span class="text-headline-sm font-headline-sm font-bold text-primary tracking-tight">EduNova</span>
+</div>
+<!-- Trailing Help Action -->
+<button aria-label="Ayuda y soporte" class="p-space-xs rounded-full text-primary hover:bg-surface-container active:scale-95 transition-transform duration-150 flex items-center justify-center" type="button">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</header>
+<!-- Main Registration Flow Content -->
+<div class="px-margin-mobile flex-1 flex flex-col pt-space-xs">
+<!-- Screen Headline Banner -->
+<div class="mb-space-lg">
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-on-surface tracking-tight">
+          Crea tu cuenta
+        </h1>
+<p class="text-body-md font-body-md text-on-surface-variant mt-space-2xs">
+          Gestión escolar simple, sin sobrecarga ni agobio.
+        </p>
+</div>
+<!-- Role Selector Filter Segment (Pill Segmented Controller with Sliding Indicator) -->
+<div class="mb-space-lg">
+<label class="block text-label-sm font-label-sm text-on-surface-variant mb-space-xs tracking-wide uppercase">
+          REGISTRARSE COMO
+        </label>
+<div class="relative bg-surface-container-low p-1.5 rounded-full flex items-center calm-shadow-card select-none" id="role-container">
+<!-- Smooth Sliding Active Indicator Pill -->
+<div class="absolute top-1.5 bottom-1.5 rounded-full bg-surface-container-lowest shadow-sm transition-all duration-300 ease-in-out pointer-events-none" id="sliding-indicator" style="left: 6px; width: calc((100% - 12px) / 3);"></div>
+<!-- Teacher / Docente (Active by default) -->
+<button class="relative z-10 flex-1 py-2.5 rounded-full text-label-md font-label-md transition-colors duration-200 flex items-center justify-center gap-1.5 text-primary" id="role-teacher" onclick="selectRole('teacher')" onmouseenter="hoverRole('teacher')" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="school">school</span>
+            Docente
+          </button>
+<!-- Staff / Equipo / Personal -->
+<button class="relative z-10 flex-1 py-2.5 rounded-full text-label-md font-label-md transition-colors duration-200 flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface" id="role-staff" onclick="selectRole('staff')" onmouseenter="hoverRole('staff')" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="badge">badge</span>
+            Funcionario(a)
+          </button>
+<!-- Parent / Apoderado(a) -->
+<button class="relative z-10 flex-1 py-2.5 rounded-full text-label-md font-label-md transition-colors duration-200 flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface" id="role-parent" onclick="selectRole('parent')" onmouseenter="hoverRole('parent')" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="family_restroom">family_restroom</span>
+            Apoderado(a)
+          </button>
+</div>
+</div>
+<!-- Registration Form -->
+<div class="mb-space-md p-3.5 bg-error-container/60 border border-error/20 rounded-DEFAULT flex items-start gap-space-xs text-on-surface" id="form-alert"><span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5" data-icon="error">error</span><div class="flex-1"><p class="text-label-md font-label-md text-error">Revisa los datos ingresados</p><p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Por favor completa todos los campos requeridos para registrar la cuenta en el sistema escolar.</p></div><button aria-label="Cerrar alerta" class="text-outline hover:text-on-surface p-0.5 rounded-full" onclick="this.parentElement.remove()" type="button"><span class="material-symbols-outlined text-[18px]" data-icon="close">close</span></button></div><form class="space-y-space-md" onsubmit="event.preventDefault();">
+<!-- Full Name -->
+<div><label class="block text-label-md font-label-md text-on-surface mb-1.5" for="full_name">Nombre completo <span class="text-error">*</span></label><div class="relative"><input autocomplete="name" class="w-full h-[52px] px-space-md rounded-DEFAULT bg-surface-container-low border-0 text-on-surface text-body-md font-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all duration-150" id="full_name" name="full_name" placeholder="ej. Marcela González" required="" type="text"/><div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-outline flex items-center pointer-events-none"><span class="material-symbols-outlined text-[20px]" data-icon="person">person</span></div></div><p class="mt-1 text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary" data-icon="info">info</span> Nombre y dos apellidos como figura en registros oficiales</p></div>
+<!-- School / Kindergarten Name -->
+<div id="school-name-group"><label class="block text-label-md font-label-md text-on-surface mb-1.5" for="school_name">Nombre del colegio o jardín infantil <span class="text-error">*</span></label><div class="relative"><input autocomplete="organization" class="w-full h-[52px] px-space-md rounded-DEFAULT bg-surface-container-low border-0 text-on-surface text-body-md font-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all duration-150" id="school_name" name="school_name" placeholder="ej. Jardín Infantil Valle Alegre / Colegio Los Alerces" required="" type="text"/><div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-outline flex items-center pointer-events-none"><span class="material-symbols-outlined text-[20px]" data-icon="domain">domain</span></div></div></div>
+<!-- School Email (Dynamic label based on role) -->
+<div><div class="flex justify-between items-center mb-1.5"><label class="text-label-md font-label-md text-on-surface" for="institutional_email" id="email-label">Correo institucional <span class="text-error">*</span></label><span class="text-label-sm font-label-sm text-on-surface-variant font-normal" id="email-hint">Institucional</span></div><div class="relative"><input autocomplete="email" class="w-full h-[52px] px-space-md rounded-DEFAULT bg-surface-container-low border-0 text-on-surface text-body-md font-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all duration-150" id="institutional_email" name="institutional_email" placeholder="marcela.gonzalez@colegio.cl" required="" type="email"/><div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-outline flex items-center pointer-events-none"><span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span></div></div><div class="mt-1 flex items-center gap-1 text-body-sm font-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-outline" data-icon="check_circle">check_circle</span> Formato requerido: usuario@establecimiento.cl o dominio institucional</div></div>
+<!-- School Verification Code with Tooltip Info -->
+<!-- Create Password -->
+<div><input id="role" name="role" type="hidden" value="teacher"/><label class="block text-label-md font-label-md text-on-surface mb-1.5" for="password">Crear contraseña <span class="text-error">*</span></label><div class="relative"><input autocomplete="new-password" class="w-full h-[52px] px-space-md pr-12 rounded-DEFAULT bg-surface-container-low border-0 text-on-surface text-body-md font-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all duration-150" id="password" minlength="8" name="password_hash" placeholder="Mínimo 8 caracteres" required="" type="password"/><button aria-label="Alternar visibilidad de contraseña" class="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 text-on-surface-variant hover:text-on-surface rounded-full flex items-center justify-center transition-colors" onclick="togglePasswordVisibility()" type="button"><span class="material-symbols-outlined text-[20px]" data-icon="visibility" id="pwd-icon">visibility</span></button></div><p class="mt-1 text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline" data-icon="lock">lock</span> Mínimo 8 caracteres con números y letras para mayor seguridad</p></div>
+<!-- Gentle Caregiver Boundary & Restorative Privacy Callout -->
+<div class="flex items-start gap-space-xs p-3.5 bg-secondary-container/25 rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5" data-icon="eco">eco</span>
+<p class="text-body-sm font-body-sm text-on-surface leading-snug">
+<strong class="font-semibold text-secondary">Límites saludables:</strong> Cuidamos los tiempos de descanso docente y la privacidad de las familias. Sin alertas ni llamadas fuera de horario laboral.
+          </p>
+</div>
+<!-- Submit CTA Button -->
+<div class="pt-space-xs">
+<button class="w-full h-[52px] bg-primary hover:bg-primary-container text-on-primary text-label-lg font-label-lg rounded-full calm-shadow-card button-spring flex items-center justify-center gap-2" type="submit">
+<span class="">Crear cuenta</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Bottom Log In Redirection -->
+<div class="mt-space-lg text-center pb-space-md">
+<p class="text-body-md font-body-md text-on-surface-variant">
+          ¿Ya tienes cuenta? 
+          <a class="font-semibold text-primary hover:underline ml-1 inline-flex items-center" href="#">
+            Iniciar sesión
+          </a>
+</p>
+</div>
+</div>
+</main>
+<!-- Interactive script for gentle role switching, sliding pill indicator, and password reveal -->
+<script>
+    let currentRole = 'teacher';
+    const roles = ['teacher', 'staff', 'parent'];
+
+    function updatePillPosition(role) {
+      const container = document.getElementById('role-container');
+      const targetBtn = document.getElementById(`role-${role}`);
+      const indicator = document.getElementById('sliding-indicator');
+      if (!container || !targetBtn || !indicator) return;
+
+      const containerRect = container.getBoundingClientRect();
+      const targetRect = targetBtn.getBoundingClientRect();
+
+      indicator.style.left = `${targetRect.left - containerRect.left}px`;
+      indicator.style.width = `${targetRect.width}px`;
+    }
+
+    function updateTextStyles(activeRole) {
+      roles.forEach(r => {
+        const btn = document.getElementById(`role-${r}`);
+        if (!btn) return;
+        if (r === activeRole) {
+          btn.classList.add('text-primary');
+          btn.classList.remove('text-on-surface-variant');
+        } else {
+          btn.classList.remove('text-primary');
+          btn.classList.add('text-on-surface-variant');
+        }
+      });
+    }
+
+    function hoverRole(role) {
+      updatePillPosition(role);
+      updateTextStyles(role);
+    }
+
+    function selectRole(role) {
+      currentRole = role;
+      const roleHiddenInput = document.getElementById('role');
+      if (roleHiddenInput) roleHiddenInput.value = role;
+
+      updatePillPosition(role);
+      updateTextStyles(role);
+
+      const emailLabel = document.getElementById('email-label');
+      const emailHint = document.getElementById('email-hint');
+      const emailInput = document.getElementById('institutional_email');
+
+      // Contextually adapt labels to match role
+      if (role === 'parent') {
+        if (emailLabel) emailLabel.innerHTML = 'Correo o teléfono <span class="text-error">*</span>';
+        if (emailHint) emailHint.textContent = "Personal";
+        if (emailInput) emailInput.placeholder = "apoderado@correo.cl o +56 9 1234 5678";
+      } else if (role === 'staff') {
+        if (emailLabel) emailLabel.innerHTML = 'Correo institucional o laboral <span class="text-error">*</span>';
+        if (emailHint) emailHint.textContent = "Institucional";
+        if (emailInput) emailInput.placeholder = "contacto@colegio.cl";
+      } else {
+        if (emailLabel) emailLabel.innerHTML = 'Correo institucional <span class="text-error">*</span>';
+        if (emailHint) emailHint.textContent = "Institucional";
+        if (emailInput) emailInput.placeholder = "marcela.gonzalez@colegio.cl";
+      }
+    }
+
+    // Reset indicator position on mouse leave if hovered away
+    const roleContainer = document.getElementById('role-container');
+    if (roleContainer) {
+      roleContainer.addEventListener('mouseleave', () => {
+        updatePillPosition(currentRole);
+        updateTextStyles(currentRole);
+      });
+    }
+
+    // Initial positioning after DOM load and window resize
+    window.addEventListener('DOMContentLoaded', () => {
+      updatePillPosition(currentRole);
+    });
+    window.addEventListener('resize', () => {
+      updatePillPosition(currentRole);
+    });
+
+    function togglePasswordVisibility() {
+      const pwdInput = document.getElementById('password');
+      const pwdIcon = document.getElementById('pwd-icon');
+      if (pwdInput.type === 'password') {
+        pwdInput.type = 'text';
+        pwdIcon.textContent = 'visibility_off';
+      } else {
+        pwdInput.type = 'password';
+        pwdIcon.textContent = 'visibility';
+      }
+    }
+  </script>
+</body></html>
