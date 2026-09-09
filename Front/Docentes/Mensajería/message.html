@@ -1,79 +1,68 @@
 <!DOCTYPE html>
 
-<html class="light" lang="es"><head>
+<html class="h-full" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Bandeja de Mensajería Institucional - EduNova</title>
-<!-- Google Fonts: Plus Jakarta Sans -->
+<title>EduNova - Portal Docente | Mensajería</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols Outlined -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS v3 with forms & container queries -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-
-
-
-
-
-<!-- DO YOU FEEL BONITA? -->
-
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
           "colors": {
-            "on-error": "#ffffff",
-            "inverse-primary": "#a7c8ff",
-            "on-primary": "#ffffff",
-            "outline-variant": "#c1c6d4",
-            "inverse-surface": "#263143",
-            "tertiary-container": "#4876b4",
-            "tertiary-fixed-dim": "#a5c8ff",
-            "on-secondary-fixed-variant": "#00513d",
-            "surface-container": "#e7eeff",
-            "error-container": "#ffdad6",
-            "outline": "#727783",
-            "secondary-fixed-dim": "#7ed7b7",
-            "inverse-on-surface": "#ecf1ff",
-            "on-tertiary-fixed": "#001c3a",
-            "on-surface": "#111c2d",
-            "tertiary-fixed": "#d4e3ff",
-            "on-primary-fixed": "#001b3c",
             "surface-container-low": "#f0f3ff",
-            "surface-container-highest": "#d8e3fb",
-            "on-surface-variant": "#414752",
-            "on-background": "#111c2d",
-            "on-tertiary-container": "#fefcff",
-            "surface-container-lowest": "#ffffff",
-            "on-tertiary-fixed-variant": "#0b4782",
-            "primary-fixed": "#d5e3ff",
-            "secondary-container": "#97f1d0",
-            "primary-fixed-dim": "#a7c8ff",
-            "on-secondary": "#ffffff",
-            "primary": "#005cae",
-            "on-secondary-container": "#007056",
-            "surface-variant": "#d8e3fb",
-            "surface-bright": "#f9f9ff",
-            "secondary-fixed": "#9af4d3",
-            "primary-container": "#2b75cd",
             "on-primary-fixed-variant": "#004689",
-            "surface-container-high": "#dee8ff",
-            "background": "#f9f9ff",
-            "on-tertiary": "#ffffff",
-            "surface-dim": "#cfdaf2",
             "surface-tint": "#005eb3",
-            "secondary": "#006c52",
-            "tertiary": "#2b5d99",
             "on-error-container": "#93000a",
+            "inverse-surface": "#263143",
+            "primary-container": "#2b75cd",
+            "on-error": "#ffffff",
+            "surface-bright": "#f9f9ff",
+            "tertiary-fixed": "#d4e3ff",
+            "on-tertiary-container": "#fefcff",
+            "on-secondary-container": "#007056",
+            "primary": "#005cae",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-container": "#e7eeff",
+            "tertiary": "#2b5d99",
+            "on-surface-variant": "#414752",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-container": "#4876b4",
+            "on-surface": "#111c2d",
+            "outline": "#727783",
+            "outline-variant": "#c1c6d4",
+            "error-container": "#ffdad6",
+            "surface-variant": "#d8e3fb",
+            "on-primary-fixed": "#001b3c",
+            "secondary-fixed": "#9af4d3",
+            "on-tertiary-fixed-variant": "#0b4782",
+            "secondary-container": "#97f1d0",
+            "on-secondary-fixed": "#002117",
+            "background": "#f9f9ff",
+            "tertiary-fixed-dim": "#a5c8ff",
+            "inverse-primary": "#a7c8ff",
+            "primary-fixed": "#d5e3ff",
+            "on-background": "#111c2d",
             "on-primary-container": "#fefcff",
             "surface": "#f9f9ff",
-            "on-secondary-fixed": "#002117",
-            "error": "#ba1a1a"
+            "on-secondary-fixed-variant": "#00513d",
+            "surface-container-high": "#dee8ff",
+            "on-tertiary-fixed": "#001c3a",
+            "primary-fixed-dim": "#a7c8ff",
+            "error": "#ba1a1a",
+            "secondary": "#006c52",
+            "secondary-fixed-dim": "#7ed7b7",
+            "surface-dim": "#cfdaf2",
+            "inverse-on-surface": "#ecf1ff",
+            "surface-container-highest": "#d8e3fb"
           },
           "borderRadius": {
             "DEFAULT": "1rem",
@@ -82,46 +71,46 @@
             "full": "9999px"
           },
           "spacing": {
+            "space-xs": "0.5rem",
+            "margin-desktop": "3rem",
+            "margin-tablet": "2rem",
+            "gutter": "1rem",
             "space-3xl": "3.5rem",
             "space-xl": "2rem",
             "space-2xl": "2.5rem",
-            "margin-tablet": "2rem",
-            "space-md": "1rem",
-            "margin-desktop": "3rem",
-            "gutter": "1rem",
-            "space-xs": "0.5rem",
-            "margin-mobile": "1.25rem",
             "space-sm": "0.75rem",
-            "space-2xs": "0.25rem",
-            "space-lg": "1.5rem"
+            "space-md": "1rem",
+            "margin-mobile": "1.25rem",
+            "space-lg": "1.5rem",
+            "space-2xs": "0.25rem"
           },
           "fontFamily": {
-            "label-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
             "headline-md": ["Plus Jakarta Sans"],
             "headline-sm": ["Plus Jakarta Sans"],
-            "body-sm": ["Plus Jakarta Sans"],
-            "headline-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
             "headline-lg-mobile": ["Plus Jakarta Sans"],
-            "body-lg": ["Plus Jakarta Sans"],
-            "label-sm": ["Plus Jakarta Sans"],
             "display-mobile": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"],
             "body-md": ["Plus Jakarta Sans"],
-            "label-md": ["Plus Jakarta Sans"],
-            "display": ["Plus Jakarta Sans"]
+            "body-sm": ["Plus Jakarta Sans"]
           },
           "fontSize": {
-            "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "600" }],
-            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
-            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
-            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
-            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
-            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-            "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }],
-            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }],
-            "display-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
-            "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "600" }],
-            "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+            "label-md": ["13px", {"lineHeight": "16px", "fontWeight": "600"}],
+            "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+            "body-lg": ["17px", {"lineHeight": "26px", "fontWeight": "400"}],
+            "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "label-lg": ["15px", {"lineHeight": "20px", "fontWeight": "600"}],
+            "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "display-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "display": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "body-md": ["15px", {"lineHeight": "22px", "fontWeight": "400"}],
+            "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}]
           }
         },
       },
@@ -134,270 +123,274 @@
       vertical-align: middle;
       line-height: 1;
     }
-    .ambient-shadow {
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    .soft-shadow {
       box-shadow: 0 4px 20px -2px rgba(75, 142, 232, 0.06), 0 2px 6px -1px rgba(30, 41, 59, 0.04);
     }
-    .ambient-shadow-float {
-      box-shadow: 0 12px 32px -4px rgba(75, 142, 232, 0.12), 0 4px 12px -2px rgba(30, 41, 59, 0.03);
+    .ambient-glow {
+      box-shadow: 0 12px 32px -4px rgba(75, 142, 232, 0.10), 0 4px 12px -2px rgba(30, 41, 59, 0.03);
     }
-    .subtle-ring {
-      box-shadow: inset 0 0 0 1px rgba(124, 213, 181, 0.25);
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
     }
-    .pb-safe {
-      padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 4.5rem);
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   </style>
 </head>
-
-
-
-
-
-<!-- BODY HTML -->
-
-<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col justify-between selection:bg-secondary-container selection:text-on-secondary-container">
-<!-- Mobile Frame Container (Max-w-md centered for authentic mobile UX) -->
-<div class="w-full max-w-md mx-auto min-h-screen flex flex-col relative bg-background pb-safe">
-<!-- Top Navigation & Brand Header (Shared Component: TopAppBar aligned) -->
-<header class="bg-surface dark:bg-surface w-full px-gutter max-w-md mx-auto h-16 flex justify-between items-center sticky top-0 z-30">
-<!-- Leading Back Action -->
-<button aria-label="Volver a Ficha Alumno" class="flex items-center gap-space-2xs text-primary dark:text-inverse-primary hover:bg-surface-container transition-colors active:scale-95 duration-150 rounded-full px-space-xs py-space-2xs" onclick="window.history.back()">
-<span class="material-symbols-outlined text-primary text-[22px]">arrow_back</span>
-<span class="font-label-sm text-label-sm hidden sm:inline-block text-primary">Ficha</span>
-</button>
-<!-- Brand Center Anchor with provided Logo -->
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex justify-center selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Canvas Móvil Centrado (Serene Meadow Design) -->
+<div class="w-full max-w-md bg-surface min-h-screen flex flex-col relative pb-32">
+<!-- 1. Top App Bar Conectada e Intuitiva -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md px-margin-mobile h-16 flex items-center justify-between shadow-sm">
 <div class="flex items-center gap-space-xs">
-<img alt="EduNova Logo" class="w-8 h-8 rounded-full object-contain bg-surface-container-lowest p-0.5 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDATHCjtJb3KnH6x3nzg4vaWoXwomKns5lS9JQlrUbYSHOTa4yaBC63IvuAlpyQkACVhVFdBfrpft-9FgjiRYASGa6yAge8Kwz74ygiFeQqA0YGrX8v-lcZO7eoytPw__dIYLhyWVm9xMa0UiKtogjPHdCpNAuuYpqHPn83VWpG-xZkW4xl6nLwHcxUpVY0SqX7l8BTTJTD5EDKwLsX0Iav2VWWxwNJvoXPhlFh5TKU719tgPjMmmrJpSNi2OWgXy3RnA"/>
-<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-inverse-primary tracking-tight">EduNova</span>
+<a class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container transition-colors active:scale-95 duration-150" href="#home-cursos" title="Volver a Cursos y Alumnos">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</a>
+<div class="flex items-center gap-space-2xs">
+<img alt="EduNova Logo" class="w-8 h-8 object-contain rounded-full bg-surface-container-lowest p-0.5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDijGza63ZObFVCa38dzBD2HMtiVVsHoi3teyvg6zkiajO5PC2mE1Z0KiXTuK-GdacXvpK29yHyIZvuyT81HiBv5kTiiKbjLAfxnfGZ2MlASRSnkW3szzHnyXP3DAn0i-mSPdLZjANSSxmNsJwzAmqlcEG5Z2PaBurb35DTnlX1CkqwZV6f9-l1KZD8BNuVhB_7dsuTwmiepXPNEFMDHVGp79MDSR5fnvoju_s7w19wYtB38pnotL4CqB01dyVIbVO8HQ"/>
+<div class="flex flex-col ml-1">
+<span class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight leading-tight">EduNova</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Portal Docente</span>
 </div>
-<!-- Trailing Help / Info -->
-<button aria-label="Ayuda" class="w-10 h-10 flex items-center justify-center rounded-full text-primary dark:text-inverse-primary hover:bg-surface-container dark:hover:bg-inverse-surface transition-colors active:scale-95 duration-150">
-<span class="material-symbols-outlined text-[22px]">help_outline</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Ayuda del sistema" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-outline text-[20px]">help_outline</span>
 </button>
+<!-- Ícono de Perfil 'PC' (Prof. Clara) -->
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold ring-2 ring-surface-container-lowest cursor-pointer hover:opacity-90 transition-opacity" title="Sesión activa: Prof. Clara">
+          PC
+        </div>
+</div>
 </header>
-<!-- Context Title & Operational Schedule Banner -->
-<section class="px-margin-mobile pt-space-xs pb-space-sm">
-<div class="flex flex-col gap-space-2xs">
-<div class="flex items-center justify-between">
-<div>
-<span class="font-label-sm text-label-sm text-tertiary">Comunicaciones Colegio San Gabriel</span>
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">Mensajes Institucionales</h1>
-</div>
-<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-[22px]">forum</span>
-</div>
-</div>
-<!-- Health/Schedule Guard Chip -->
-<div class="mt-space-2xs inline-flex items-center gap-space-xs bg-surface-container-low border border-outline-variant/30 rounded-full px-space-md py-space-2xs self-start">
-<span class="relative flex h-2.5 w-2.5">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
-</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">
-            Horario hábil: <strong class="text-secondary font-semibold">08:00 a 17:30 hrs</strong>
-</span>
-<span class="material-symbols-outlined text-outline text-[16px]">schedule</span>
-</div>
-</div>
-</section>
-<!-- Navigation Tabs (Segmented Control) -->
-<nav aria-label="Filtro de mensajería" class="px-margin-mobile py-space-2xs">
-<div class="flex items-center gap-space-2xs bg-surface-container-low p-1 rounded-full">
-<!-- Active Tab: Recibidos -->
-<button class="flex-1 flex items-center justify-center gap-space-2xs bg-surface-container-lowest text-primary py-space-xs px-space-sm rounded-full shadow-sm font-label-md text-label-md transition-all active:scale-95">
-<span>Recibidos</span>
-<span class="bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full min-w-[20px] text-center">2</span>
-</button>
-<!-- Inactive Tab: Enviados -->
-<button class="flex-1 flex items-center justify-center gap-space-2xs text-on-surface-variant hover:text-on-surface py-space-xs px-space-sm rounded-full font-label-md text-label-md transition-colors active:scale-95">
-<span>Enviados</span>
-</button>
-<!-- Inactive Tab: Comunicados Oficiales -->
-<button class="flex-1 flex items-center justify-center gap-space-2xs text-on-surface-variant hover:text-on-surface py-space-xs px-space-sm rounded-full font-label-md text-label-md transition-colors active:scale-95 text-center truncate">
-<span class="truncate">Comunicados</span>
-</button>
-</div>
-</nav>
-<!-- Primary Action: Redactar mensaje institucional -->
-<div class="px-margin-mobile pt-space-sm pb-space-xs">
-<button class="w-full h-[52px] bg-primary text-on-primary rounded-full font-label-lg text-label-lg flex items-center justify-center gap-space-xs ambient-shadow active:scale-[0.98] transition-transform duration-150">
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">add_circle</span>
-<span>Redactar mensaje institucional</span>
-</button>
-</div>
-<!-- Messages Feed / Bento-style Calm Cards -->
-<main class="px-margin-mobile flex-1 flex flex-col gap-space-md pt-space-xs">
-<!-- Mensaje 1: Apoderada Camila Contreras -->
-<article class="bg-surface-container-lowest rounded-lg p-space-md ambient-shadow border border-surface-container-high relative overflow-hidden transition-all hover:bg-surface-container-low/40">
-<!-- Accent indicator strip -->
-<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary rounded-l-lg"></div>
-<div class="flex items-start justify-between gap-space-sm pl-space-2xs">
-<!-- Avatar + Remitente Info -->
-<div class="flex items-center gap-space-sm">
-<div class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary font-bold font-label-lg text-label-lg">
-              CC
-            </div>
-<div>
-<h2 class="font-label-lg text-label-lg text-on-surface">Camila Contreras</h2>
-<p class="font-body-sm text-body-sm text-tertiary">Madre de Mateo Silva · 1° Básico B</p>
-</div>
-</div>
-<!-- Time indicator -->
-<span class="font-label-sm text-label-sm text-outline">Ayer 16:40</span>
-</div>
-<!-- Subject & Snippet -->
-<div class="mt-space-sm pl-space-2xs">
-<h3 class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-1.5">
-<span>Consulta por material de lectura</span>
-</h3>
-<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
-            "Estimada profesora: junto con saludarle, quisiera confirmar si el libro 'El oso que leía cuentos' lo trabajaremos en fotocopias o impreso..."
-          </p>
-</div>
-<!-- Badges & Action Response Footer -->
-<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between pl-space-2xs">
-<div class="flex items-center gap-space-2xs flex-wrap">
-<!-- Chip: Horario Hábil -->
-<span class="inline-flex items-center gap-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full">
-<span class="material-symbols-outlined text-[14px]">cloud_download</span>
-<span>Horario hábil</span>
-</span>
-<!-- Chip: Respondido -->
-<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">
-<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span>Respondido</span>
-</span>
-</div>
-<button class="text-primary font-label-sm text-label-sm flex items-center gap-0.5 hover:underline active:scale-95">
-<span>Ver hilo</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</button>
-</div>
-</article>
-<!-- Mensaje 2: Apoderado Jorge Rojas -->
-<article class="bg-surface-container-lowest rounded-lg p-space-md ambient-shadow border border-secondary/30 relative overflow-hidden bg-gradient-to-br from-surface-container-lowest to-surface-container-low/30">
-<!-- Attention Indicator Strip -->
-<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container rounded-l-lg"></div>
-<div class="flex items-start justify-between gap-space-sm pl-space-2xs">
-<!-- Avatar + Remitente Info -->
-<div class="flex items-center gap-space-sm">
-<div class="w-11 h-11 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold font-label-lg text-label-lg">
-              JR
-            </div>
-<div>
-<div class="flex items-center gap-1.5">
-<h2 class="font-label-lg text-label-lg text-on-surface">Jorge Rojas</h2>
-<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-</div>
-<p class="font-body-sm text-body-sm text-tertiary">Padre de Valentina Rojas · 1° Básico B</p>
-</div>
-</div>
-<!-- Time indicator -->
-<span class="font-label-sm text-label-sm text-primary font-semibold">Hoy 10:15</span>
-</div>
-<!-- Subject & Snippet -->
-<div class="mt-space-sm pl-space-2xs">
-<h3 class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-1.5">
-<span>Aviso de retiro temprano médica</span>
-<span class="material-symbols-outlined text-primary text-[18px]">medical_services</span>
-</h3>
-<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">
-            "Buenos días. Informo que Valentina será retirada hoy a las 12:30 hrs por su abuela Marta debido a hora con especialista dental. Adjunto certificado..."
-          </p>
-</div>
-<!-- Badges & Action Response Footer -->
-<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between pl-space-2xs">
-<div class="flex items-center gap-space-2xs">
-<!-- Chip: Pendiente de confirmación -->
-<span class="inline-flex items-center gap-1 bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">
-<span class="material-symbols-outlined text-[14px]">pending_actions</span>
-<span>Pendiente de confirmación</span>
-</span>
-</div>
-<button class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-sm py-1.5 rounded-full flex items-center gap-1 active:scale-95 transition-transform font-semibold">
-<span class="material-symbols-outlined text-[16px]">reply</span>
-<span>Responder</span>
-</button>
-</div>
-</article>
-<!-- Mensaje 3: Inspectoría General / Dirección -->
-<article class="bg-surface-container-lowest rounded-lg p-space-md ambient-shadow border border-surface-container-high relative overflow-hidden transition-all hover:bg-surface-container-low/40">
-<!-- Institutional Strip -->
-<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container rounded-l-lg"></div>
-<div class="flex items-start justify-between gap-space-sm pl-space-2xs">
-<!-- Avatar + Remitente Info -->
-<div class="flex items-center gap-space-sm">
-<div class="w-11 h-11 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-bold">
-<span class="material-symbols-outlined text-[22px]">corporate_fare</span>
-</div>
-<div>
-<div class="flex items-center gap-1.5">
-<h2 class="font-label-lg text-label-lg text-on-surface">Inspectoría General</h2>
-<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
-</div>
-<p class="font-body-sm text-body-sm text-tertiary">Dirección Académica</p>
-</div>
-</div>
-<!-- Time indicator -->
-<span class="font-label-sm text-label-sm text-outline">Lun 09:00</span>
-</div>
-<!-- Subject & Snippet -->
-<div class="mt-space-sm pl-space-2xs">
-<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">
-            Recordatorio: Consejo de Profesores jueves
-          </h3>
-<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">
-            "Estimado cuerpo docente: Recordamos que este jueves 24 se llevará a cabo la sesión mensual de evaluación primer ciclo en la sala multiuso..."
-          </p>
-</div>
-<!-- Badges & Action Response Footer -->
-<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between pl-space-2xs">
-<div class="flex items-center gap-space-2xs">
-<!-- Chip: Institucional -->
-<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-medium">
-<span class="material-symbols-outlined text-[14px]">policy</span>
-<span>Institucional</span>
-</span>
-</div>
-<button class="text-primary font-label-sm text-label-sm flex items-center gap-0.5 hover:underline active:scale-95">
-<span>Ver detalles</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</button>
-</div>
-</article>
-<!-- Sanctuary / Digital Well-being Banner (Mandato 5) -->
-<aside class="my-space-xs bg-surface-container-low rounded-lg p-space-md border border-secondary/20 flex gap-space-sm items-start">
-<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex-shrink-0 flex items-center justify-center">
-<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+<!-- Contenedor Principal de Contenidos -->
+<main class="flex-1 px-margin-mobile pt-space-xs space-y-space-md">
+<!-- 2. Banner de Resguardo Docente y Bienestar -->
+<section class="bg-surface-container-low rounded-lg p-space-md soft-shadow border border-secondary/10 flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">bedtime</span>
 </div>
 <div class="flex-1">
-<div class="flex items-center gap-1.5">
-<h4 class="font-label-md text-label-md text-on-surface font-semibold">EduNova protege tu descanso</h4>
-<span class="material-symbols-outlined text-secondary text-[16px]">lock_clock</span>
+<div class="flex items-center gap-1.5 mb-1">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<h2 class="font-label-md text-label-md text-secondary font-bold tracking-tight">Jornada activa (08:00 - 17:30 hrs)</h2>
 </div>
-<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Las respuestas recibidas después de las <strong>17:30 hrs</strong> se entregarán mañana a las <strong>08:00 hrs</strong> para que desconectes tranquilamente con tu familia.
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Modo silencio automático al término de la jornada escolar para cuidar tu descanso y bienestar docente.
           </p>
 </div>
-</aside>
+</section>
+<!-- 3. Botón de Acción Principal (+ Redactar) -->
+<section>
+<button class="w-full h-[52px] bg-primary text-on-primary rounded-full px-space-lg flex items-center justify-center gap-space-xs font-label-lg text-label-lg font-semibold ambient-glow hover:bg-primary-container active:scale-[0.98] transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[22px]">edit_note</span>
+<span>Redactar comunicación a apoderado o jefatura</span>
+</button>
+</section>
+<!-- 4. Buscador y Filtros Rápidos -->
+<section class="flex items-center gap-space-xs">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-[48px] pl-11 pr-4 bg-surface-container-lowest rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline border-none ring-1 ring-outline-variant/30 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest focus:outline-none transition-all shadow-sm" placeholder="Buscar por apoderado, alumno o curso..." type="search"/>
+</div>
+<button aria-label="Abrir filtros" class="w-[48px] h-[48px] rounded-full bg-surface-container-lowest text-on-surface ring-1 ring-outline-variant/30 flex items-center justify-center hover:bg-surface-container active:scale-95 transition-all shadow-sm shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+</button>
+</section>
+<!-- 5. Píldoras de Cursos Asignados a la Docente -->
+<section class="space-y-space-2xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm text-outline font-semibold tracking-wider uppercase">Mis Cursos Asignados</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">3 cursos</span>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1">
+<!-- 1° Básico B (Seleccionado) -->
+<button class="h-9 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center gap-1.5 shadow-sm shrink-0 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>1° Básico B</span>
+<span class="w-5 h-5 rounded-full bg-on-primary/20 text-on-primary text-[10px] flex items-center justify-center font-bold">2</span>
+</button>
+<!-- Kínder A -->
+<button class="h-9 px-4 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium border border-outline-variant/40 hover:bg-surface-container shrink-0 active:scale-95 transition-all" type="button">
+<span>Kínder A</span>
+</button>
+<!-- 2° Básico A -->
+<button class="h-9 px-4 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium border border-outline-variant/40 hover:bg-surface-container shrink-0 active:scale-95 transition-all" type="button">
+<span>2° Básico A</span>
+<span class="ml-1 text-[11px] text-outline font-normal">(1)</span>
+</button>
+</div>
+</section>
+<!-- 6. Pestañas de Estado -->
+<section class="pt-1">
+<div class="flex items-center bg-surface-container-low p-1 rounded-full text-center">
+<button class="flex-1 py-2 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md font-semibold shadow-sm transition-all flex items-center justify-center gap-1" type="button">
+<span>Por responder</span>
+<span class="w-5 h-5 rounded-full bg-error text-on-error text-[11px] font-bold flex items-center justify-center">3</span>
+</button>
+<button class="flex-1 py-2 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">
+<span>Enviados</span>
+</button>
+<button class="flex-1 py-2 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">
+<span>Citaciones</span>
+</button>
+</div>
+</section>
+<!-- 7. Tarjetas de Mensajes de Apoderados y Gestión de Aula -->
+<section class="space-y-space-sm pt-1">
+<!-- Tarjeta 1: Camila Contreras -->
+<article class="bg-surface-container-lowest rounded-lg p-space-md soft-shadow border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img alt="Estudiante Benjamín Araya" class="w-12 h-12 rounded-full object-cover ring-2 ring-surface-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1WEi-WDJUZmYpYbpB7Fs5YmTV2YZZxgXIQyq3pQ4z1BUhaA__dvPlYGnO5XyBa1T4Mf_9yp-GDyRjzMao31i5IOU68i_fA9rEVrEQTrIbJraOnbjUy_wS_uHgB27L0SMNvemaIkIzJ7hJCufrCswph6QZnOFoxva3SSs1rJbIaerk7cBBUSEFB9m8x-0tYqHijwV-e8hRT0WtvCVGE7AA99NDz46zJ1ju-symR-_UoWMiAMkN0m5Y40VA"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest" title="Apoderado en línea"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Camila Contreras</h3>
+<span class="bg-surface-container px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant font-medium">1° Básico B</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline">Apoderada de Benjamín Araya • Hoy 09:42 hrs</p>
+</div>
+</div>
+<span class="bg-amber-100 text-amber-900 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold shrink-0">
+              Prioridad media
+            </span>
+</div>
+<div class="bg-surface-container-low/60 rounded-xl p-3">
+<p class="font-body-sm text-body-sm text-on-surface font-medium mb-1">
+              "Consulta sobre lectura complementaria y material de lenguaje"
+            </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Estimada Profesora Clara, buenos días. Benjamín olvidó en la sala el cuadernillo de lectura mensual. ¿Será posible que lo retire hoy en portería o me indique las páginas de repaso?
+            </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Espera: 2h</span>
+</div>
+<button class="h-9 px-4 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold hover:bg-secondary-container active:scale-95 transition-transform flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">reply</span>
+<span>Responder en horario hábil</span>
+</button>
+</div>
+</article>
+<!-- Tarjeta 2: Roberto Silva -->
+<article class="bg-surface-container-lowest rounded-lg p-space-md soft-shadow border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img alt="Estudiante Valentina Rojas" class="w-12 h-12 rounded-full object-cover ring-2 ring-surface-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1XFmrFyhaTNnqDmvB3WoCgHWs9c83xSyp6822T1r8LH_wDjLLR1jBLsmjyPpJk8jnJEfHAO_tR51CyFNoXCVY02oZVdfOu7GAl_e5ogqEA75hBmUjCK_iTWAb9Seu-SjKVlFlk0fmGUgzSCny0YOJi3wjk4QOiFCbbRY-NKsvGyH5V8yw0qbnr0jfdnx7hDWtIfVVW_iltowftMZfYpJQWLNl9gx6R6EOq-BRXOy5hrg4-vO19B0OKINAg"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-outline-variant ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Roberto Silva</h3>
+<span class="bg-surface-container px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant font-medium">1° Básico B</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline">Apoderado de Valentina Rojas • Ayer 16:15 hrs</p>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold shrink-0">
+              Entrevista solicitada
+            </span>
+</div>
+<div class="bg-surface-container-low/60 rounded-xl p-3">
+<p class="font-body-sm text-body-sm text-on-surface font-medium mb-1">
+              "Coordinación de entrevista pedagógica presencial"
+            </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Buenas tardes Prof. Clara. Quisiera confirmar si dispone de cupo para este jueves en su hora de atención de apoderados para conversar sobre el avance en matemáticas de Valentina.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Jueves 15:30 sugerido</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-9 px-3 rounded-full border border-outline-variant text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container active:scale-95 transition-all" type="button">
+                Ver Ficha
+              </button>
+<button class="h-9 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container active:scale-95 transition-transform flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">event_available</span>
+<span>Agendar</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Tarjeta 3: Inspectoría General (Comunicado Oficial Interno) -->
+<article class="bg-surface-container-high/40 rounded-lg p-space-md soft-shadow border border-primary/20 hover:border-primary/40 transition-all flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Inspectoría General</h3>
+<span class="bg-primary/10 text-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">Oficial</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline">Circular Interna Docente • Hoy 08:15 hrs</p>
+</div>
+</div>
+<span class="bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">alarm</span>
+              16:00 hrs
+            </span>
+</div>
+<div class="pl-13 ml-2 border-l-2 border-primary/30 py-1 pl-3">
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-normal">
+              Recordatorio de registro de asistencia y firma de libro digital antes de las 16:00 hrs.
+            </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Estimado cuerpo docente: verificar los justificativos médicos ingresados durante la primera jornada de clases.
+            </p>
+</div>
+<div class="flex justify-end pt-1">
+<button class="h-8 px-3 rounded-full text-primary font-label-sm text-label-sm font-bold hover:bg-primary-fixed/40 transition-colors flex items-center gap-1" type="button">
+<span>Confirmar recepción</span>
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+</button>
+</div>
+</article>
+</section>
+<!-- 8. Banner Inferior Sutil Institucional -->
+<section class="py-space-xs text-center">
+<div class="inline-flex items-center justify-center gap-1.5 py-1.5 px-4 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+<span>Mensajería protegida con respaldo institucional EduNova</span>
+</div>
+</section>
 </main>
-<!-- Bottom Navigation Bar (Shared Component strictly mapped from JSON) -->
-<!-- Destination count: 3, Labels: ["Home", "Updates", "Support"], Active: "Updates" (Intent: Mensajes Institucionales) -->
-<nav aria-label="Navegación principal" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin-mobile py-space-xs max-w-md mx-auto pb-safe bg-surface-container-lowest dark:bg-inverse-surface shadow-sm rounded-t-lg">
-<!-- Tab 1: Home (Inactive) -->
-<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-variant transition-colors active:scale-95 duration-150" href="#home">
+<!-- 9. Barra de Navegación Inferior (Conforme al Blueprint de Shared Components) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin-mobile py-space-xs max-w-md mx-auto pb-safe bg-surface-container-lowest shadow-sm rounded-t-lg">
+<!-- Cursos/Alumnos (Home) - Enlace interactivo -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs transition-colors hover:text-primary active:scale-95 duration-150" href="#home-docente" id="home-cursos">
 <span class="material-symbols-outlined text-[24px]">school</span>
-<span class="text-label-sm font-label-sm mt-0.5">Home</span>
+<span class="font-label-sm text-label-sm mt-0.5">Cursos</span>
 </a>
-<!-- Tab 2: Updates / Mensajes (Active State mapped via style_active_navigation) -->
-<a aria-current="page" class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-space-md py-space-xs active:scale-95 transition-transform duration-150 shadow-sm" href="#updates">
-<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">notifications</span>
-<span class="text-label-sm font-label-sm mt-0.5">Updates</span>
-</a>
-<!-- Tab 3: Support (Inactive) -->
-<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-variant transition-colors active:scale-95 duration-150" href="#support">
+<!-- Mensajería (Activo con badge de 3 mensajes) -->
+<button aria-current="page" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-space-md py-space-xs relative active:scale-95 transition-transform duration-150" type="button">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px] fill-icon">notifications</span>
+<span class="absolute -top-1 -right-2 bg-error text-on-error text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-primary-container">
+            3
+          </span>
+</div>
+<span class="font-label-sm text-label-sm mt-0.5 font-bold">Mensajería</span>
+</button>
+<!-- Perfil / Ajustes -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs transition-colors hover:text-primary active:scale-95 duration-150" href="#perfil-docente">
 <span class="material-symbols-outlined text-[24px]">support_agent</span>
-<span class="text-label-sm font-label-sm mt-0.5">Support</span>
+<span class="font-label-sm text-label-sm mt-0.5">Soporte/Ajustes</span>
 </a>
 </nav>
 </div>
