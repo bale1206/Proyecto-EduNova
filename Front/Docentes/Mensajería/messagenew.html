@@ -1,0 +1,372 @@
+<!DOCTYPE html><html class="h-full bg-background" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EduNova - Redactar Mensaje</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#e7eeff",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#00513d",
+            "secondary": "#006c52",
+            "tertiary-fixed-dim": "#a5c8ff",
+            "background": "#f9f9ff",
+            "surface-container-low": "#f0f3ff",
+            "primary": "#005cae",
+            "on-primary-fixed": "#001b3c",
+            "outline": "#727783",
+            "on-primary": "#ffffff",
+            "surface": "#f9f9ff",
+            "secondary-container": "#97f1d0",
+            "surface-container-high": "#dee8ff",
+            "on-secondary-fixed": "#002117",
+            "on-primary-container": "#fefcff",
+            "on-primary-fixed-variant": "#004689",
+            "on-surface-variant": "#414752",
+            "primary-fixed": "#d5e3ff",
+            "surface-dim": "#cfdaf2",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "tertiary-container": "#4876b4",
+            "primary-container": "#2b75cd",
+            "surface-container-highest": "#d8e3fb",
+            "surface-tint": "#005eb3",
+            "inverse-primary": "#a7c8ff",
+            "on-tertiary-container": "#fefcff",
+            "tertiary": "#2b5d99",
+            "surface-variant": "#d8e3fb",
+            "primary-fixed-dim": "#a7c8ff",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#7ed7b7",
+            "on-surface": "#111c2d",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#9af4d3",
+            "inverse-on-surface": "#ecf1ff",
+            "on-tertiary-fixed": "#001c3a",
+            "inverse-surface": "#263143",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#d4e3ff",
+            "on-secondary-container": "#007056",
+            "outline-variant": "#c1c6d4",
+            "on-tertiary-fixed-variant": "#0b4782",
+            "on-background": "#111c2d",
+            "surface-bright": "#f9f9ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-3xl": "3.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.5rem",
+            "space-2xl": "2.5rem",
+            "margin-desktop": "3rem",
+            "margin-tablet": "2rem",
+            "space-2xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.75rem"
+          },
+          "fontFamily": {
+            "display-mobile": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-full font-body-md text-on-surface bg-background antialiased flex justify-center">
+<!-- Mobile Container / Canvas -->
+<div class="w-full max-w-md bg-background min-h-screen flex flex-col pb-28 relative">
+<!-- 1. Top App Bar (Shared Components Anchor with EduNova Identity) -->
+<header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md px-margin-mobile py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<button aria-label="Volver" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-headline-sm" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<img alt="EduNova Isotipo" class="w-8 h-8 object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfa-yH-GG5XXvqmHVZsbz93xsBjBwsqYlUEnoeLUycHE-oSBey6QpLcTSZ5NIkYqtq_08FlyQWwGVZU2lyQW-zrDsc8_J_ecpcOVyH6WzL8OfA185T4aNIYisFxMg1Ndm4HGIJ69qEHRQmsjs895XlqN9rXiKgenR5WeZmRIveU4-2OEVfcDVqqVxua32fMaoT49gMRK5Gm8JIFaRzvT_QNZy4k9PODXNlDeD10M-CQPFg2QmmxCSaGFDeU-fcxCaiWw">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight leading-none">EduNova</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-tight mt-0.5">Redactar Mensaje • Portal Docente</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Ayuda" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="help_outline">help_outline</span>
+</button>
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold flex items-center justify-center ring-2 ring-surface-container shadow-sm">
+          PC
+        </div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin-mobile pt-space-xs space-y-space-md">
+<!-- 2. Banner de Descanso Institucional -->
+<section class="bg-white rounded-2xl p-4 border border-[#e2e8f0] shadow-sm flex items-start gap-3.5 relative overflow-hidden">
+  <div class="w-10 h-10 rounded-full bg-[#ecfdf5] text-[#10b981] flex items-center justify-center shrink-0">
+    <span class="material-symbols-outlined text-[20px]" data-icon="schedule">schedule</span>
+  </div>
+  <div class="flex-1 min-w-0">
+    <div class="flex items-center justify-between gap-2 flex-wrap">
+      <h2 class="text-[15px] font-bold text-slate-800">Horario de Resguardo Docente</h2>
+      <span class="bg-[#dcfce7] text-[#15803d] text-[11px] font-semibold px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#15803d]"></span>
+        Jornada Activa
+      </span>
+    </div>
+    <p class="text-[13px] text-slate-600 leading-relaxed mt-1">
+      Horario lectivo de comunicación: <strong class="text-slate-800 font-semibold">08:00 – 17:30 hrs</strong>. Los mensajes enviados fuera de este bloque quedan automáticamente programados para el siguiente día hábil.
+    </p>
+  </div>
+</section>
+<!-- 3. Tipo de Comunicación (Chips Docente) -->
+<section class="space-y-2">
+  <div class="flex items-center justify-between mb-2.5">
+    <div class="flex items-center gap-2 text-[13px] font-bold text-slate-700 uppercase tracking-wider">
+      <span class="material-symbols-outlined text-[16px] text-blue-600" data-icon="category">category</span>
+      <span class="">Tipo de Comunicación Oficial</span>
+    </div>
+    <span class="text-[12px] font-medium text-slate-500">Requerido</span>
+  </div>
+  <div class="flex flex-wrap gap-2" id="type-chips">
+    <button class="bg-[#0d599f] text-white font-medium text-[13px] px-3.5 py-2 rounded-full flex items-center gap-1.5 shadow-sm transition-all cursor-pointer" type="button">
+      <span class="material-symbols-outlined text-[16px]" data-icon="check_circle">check_circle</span>
+      <span class="">Citación a Entrevista</span>
+    </button>
+    <button class="bg-white border border-slate-200 text-slate-700 font-medium text-[13px] px-3.5 py-2 rounded-full hover:bg-slate-50 transition-all flex items-center gap-1.5 cursor-pointer" type="button">
+      <span class="">Reporte de Avance</span>
+    </button>
+    <button class="bg-white border border-slate-200 text-slate-700 font-medium text-[13px] px-3.5 py-2 rounded-full hover:bg-slate-50 transition-all flex items-center gap-1.5 cursor-pointer" type="button">
+      <span class="">Aviso de Evaluación</span>
+    </button>
+    <button class="bg-white border border-slate-200 text-slate-700 font-medium text-[13px] px-3.5 py-2 rounded-full hover:bg-slate-50 transition-all flex items-center gap-1.5 cursor-pointer" type="button">
+      <span class="material-symbols-outlined text-[16px] text-amber-500" data-icon="star">star</span>
+      <span class="">Felicitación / Observación</span>
+    </button>
+  </div>
+</section>
+<!-- 4. Selección de Curso y Destinatario -->
+<section class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-3.5">
+  <!-- Encabezado de la tarjeta -->
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-[#0d599f] text-[20px]" data-icon="group">group</span>
+      <h3 class="text-[15px] font-bold text-slate-800 leading-none">Destinatarios</h3>
+    </div>
+    <span class="bg-blue-50 text-[#0d599f] text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-blue-200 inline-flex items-center gap-1.5">
+      <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+      Curso Lectivo
+    </span>
+  </div>
+
+  <!-- Selector de Curso Asignado -->
+  <div>
+    <div class="text-[12px] font-semibold text-slate-500 mb-1.5 flex items-center justify-between">
+      <span class="">Curso asignado</span>
+      <span class="text-[11px] text-slate-400 font-normal">32 estudiantes</span>
+    </div>
+    <button type="button" class="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex items-center justify-between transition-colors cursor-pointer text-left">
+      <div class="flex items-center min-w-0">
+        <div class="w-10 h-10 rounded-full bg-blue-50 text-[#0d599f] font-bold text-[12px] flex items-center justify-center shrink-0 mr-3 border border-blue-200">
+          <span class="material-symbols-outlined text-[20px]" data-icon="school">school</span>
+        </div>
+        <div class="truncate">
+          <p class="text-[14px] font-semibold text-slate-800 leading-snug truncate">1° Básico B • Jornada Mañana</p>
+          <p class="text-[12px] text-slate-500 leading-none truncate mt-0.5">32 alumnos inscritos</p>
+        </div>
+      </div>
+      <span class="material-symbols-outlined text-slate-400 text-[20px] shrink-0 ml-2" data-icon="expand_more">expand_more</span>
+    </button>
+  </div>
+
+  <!-- Botones de alcance / filtro rápido -->
+  <div class="flex items-center gap-2 pt-1 pb-1">
+    <button type="button" class="flex-1 py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-[12px] transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+      <span class="material-symbols-outlined text-[16px] text-slate-500" data-icon="checklist">checklist</span>
+      <span class="">Todo el curso (32)</span>
+    </button>
+    <button type="button" class="flex-1 py-2 px-3 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 font-semibold text-[12px] transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+      <span class="material-symbols-outlined text-[16px] text-blue-600" data-icon="person_search">person_search</span>
+      <span class="">Buscar apoderado</span>
+    </button>
+  </div>
+
+  <!-- Tarjeta del apoderado seleccionado -->
+  <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center justify-between shadow-sm">
+    <div class="flex items-center min-w-0">
+      <div class="w-10 h-10 rounded-full bg-[#dcfce7] text-[#15803d] font-bold text-[12px] flex items-center justify-center shrink-0 mr-3 border border-slate-200">
+        CC
+      </div>
+      <div class="truncate">
+        <p class="text-[14px] font-semibold text-slate-800 leading-snug truncate">Camila Contreras</p>
+        <p class="text-[12px] text-slate-500 leading-none truncate mt-0.5">Apoderada de Benjamín Araya (1° Básico B)</p>
+      </div>
+    </div>
+    <button type="button" aria-label="Cambiar destinatario" class="w-7 h-7 rounded-full flex items-center justify-center text-slate-400 hover:text-error hover:bg-slate-200 transition-colors shrink-0 ml-2">
+      <span class="material-symbols-outlined text-[16px]" data-icon="close">close</span>
+    </button>
+  </div>
+</section>
+<!-- 5. Asunto del Comunicado -->
+<section class="space-y-1.5">
+  <label class="text-[13px] font-semibold text-slate-700 mb-1.5 flex items-center justify-between" for="asunto">
+    <span class="">Asunto del Comunicado</span>
+    <span class="text-[12px] font-normal text-slate-400">Oficial</span>
+  </label>
+  <input class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-[14px] text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all" id="asunto" placeholder="Ej. Citación a entrevista por rendimiento académico..." type="text" value="">
+</section>
+<!-- 6. Cuerpo del Mensaje y Formato -->
+<section class="space-y-1.5">
+  <div class="flex items-center justify-between">
+    <label class="text-[13px] font-semibold text-slate-700">Mensaje / Cuerpo del Comunicado</label>
+    <span class="text-[12px] font-normal text-slate-400">0 / 1000 car.</span>
+  </div>
+  <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden focus-within:border-blue-600 focus-within:ring-2 focus-within:ring-blue-100 transition-all">
+    <div class="px-3.5 py-2 bg-slate-50 border-b border-slate-200 flex items-center justify-between gap-1 overflow-x-auto">
+      <div class="flex items-center gap-1">
+        <button aria-label="Negrita" class="w-7 h-7 rounded flex items-center justify-center text-slate-600 hover:bg-slate-200 active:scale-95 transition-all font-bold" title="Negrita" type="button">
+          <span class="material-symbols-outlined text-[17px]" data-icon="format_bold">format_bold</span>
+        </button>
+        <button aria-label="Cursiva" class="w-7 h-7 rounded flex items-center justify-center text-slate-600 hover:bg-slate-200 active:scale-95 transition-all" title="Cursiva" type="button">
+          <span class="material-symbols-outlined text-[17px]" data-icon="format_italic">format_italic</span>
+        </button>
+        <button aria-label="Lista con viñetas" class="w-7 h-7 rounded flex items-center justify-center text-slate-600 hover:bg-slate-200 active:scale-95 transition-all" title="Lista con viñetas" type="button">
+          <span class="material-symbols-outlined text-[17px]" data-icon="format_list_bulleted">format_list_bulleted</span>
+        </button>
+      </div>
+      <button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold text-[12px] hover:bg-blue-100 transition-colors" type="button">
+        <span class="material-symbols-outlined text-[15px]" data-icon="auto_awesome">auto_awesome</span>
+        <span class="">Plantillas</span>
+      </button>
+    </div>
+    <div class="p-3.5">
+      <textarea class="w-full bg-white border-0 text-[14px] text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-0 min-h-[120px] transition-all resize-none p-0" placeholder="Escriba aquí su comunicado..." rows="5"></textarea>
+    </div>
+    <div class="px-3.5 py-2 bg-slate-50/50 border-t border-slate-100 flex items-center justify-between text-[12px] text-slate-500">
+      <span class="inline-flex items-center gap-1 text-emerald-600 font-medium">
+        <span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+        Borrador autoguardado
+      </span>
+    </div>
+  </div>
+</section>
+<!-- 7. Adjuntar Documento -->
+<section class="">
+  <button class="w-full py-3 px-4 rounded-xl border-2 border-dashed border-blue-200 bg-blue-50/50 hover:bg-blue-50 text-blue-700 font-medium text-[14px] flex items-center justify-center gap-2 transition-colors cursor-pointer active:scale-[0.99]" type="button">
+    <span class="material-symbols-outlined text-[18px]" data-icon="attach_file">attach_file</span>
+    <span class="">Adjuntar pauta, guía o documento (PDF, JPG máx 10MB)</span>
+  </button>
+</section>
+<!-- 8. Opciones de Resguardo Docente -->
+<section class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-[0_4px_20px_-2px_rgba(75,142,232,0.06),0_2px_6px_-1px_rgba(30,41,59,0.04)] space-y-space-sm ring-1 ring-surface-container-high">
+<!-- Switch de Resguardo -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex-1">
+<p class="font-label-md text-label-md text-on-surface font-semibold">Cuidar descanso institucional</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] leading-snug">
+              Entrega programada para las 08:00 hrs del día hábil siguiente si se envía fuera del horario lectivo.
+            </p>
+</div>
+<!-- Custom Switch Activado -->
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-0.5">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-12 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="border-t border-surface-container-high pt-space-xs"></div>
+<!-- Checkbox Copia UTP -->
+<label class="flex items-center gap-space-sm cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded text-secondary focus:ring-secondary/30 border-outline-variant rounded-[6px] transition-colors cursor-pointer" type="checkbox">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors font-medium">
+              Enviar copia a Jefatura de UTP / Dirección
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">
+              Registro protocolar para archivo de convivencia escolar.
+            </span>
+</div>
+</label>
+</section>
+<!-- 9. Botones de Acción -->
+<section class="pt-2">
+  <button class="w-full py-3.5 px-6 rounded-full bg-[#0d599f] hover:bg-[#094780] text-white font-semibold text-[15px] shadow-sm hover:shadow active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer" type="button">
+    <span class="material-symbols-outlined text-[18px]" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+    <span class="">Enviar Comunicación Oficial</span>
+  </button>
+  <button class="w-full py-3 px-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-[14px] transition-all flex items-center justify-center gap-1.5 mt-2 cursor-pointer" type="button">
+    <span class="material-symbols-outlined text-[18px]" data-icon="bookmark_border">bookmark_border</span>
+    <span class="">Guardar como Borrador</span>
+  </button>
+</section>
+<!-- Microespacio final para scroll holgado -->
+<div class="h-4"></div>
+</main>
+<!-- 10. Bottom Navigation Bar Homologada con Estilos del Blueprint JSON -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin-mobile py-space-xs max-w-md mx-auto pb-safe bg-surface-container-lowest shadow-sm rounded-t-lg ring-1 ring-surface-container-high/40">
+<!-- Cursos (Inactivo) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="school">school</span>
+<span class="text-label-sm font-label-sm mt-0.5">Cursos</span>
+</button>
+<!-- Mensajería (Activo - Según Blueprint style_active_navigation) -->
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-space-md py-space-xs active:scale-95 transition-transform duration-150 relative shadow-sm" type="button">
+<!-- Badge Circular Rojo -->
+<span class="absolute top-1 right-2.5 w-4 h-4 bg-error text-on-error font-bold text-[10px] rounded-full flex items-center justify-center ring-2 ring-surface-container-lowest">
+          3
+        </span>
+<span class="material-symbols-outlined text-[22px]" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="text-label-sm font-label-sm font-semibold mt-0.5">Mensajería</span>
+</button>
+<!-- Ajustes (Inactivo) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="tune">tune</span>
+<span class="text-label-sm font-label-sm mt-0.5">Ajustes</span>
+</button>
+</nav>
+</div>
+</body></html>

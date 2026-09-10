@@ -1,0 +1,444 @@
+<!DOCTYPE html><html lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EduNova - Redactar Mensaje Apoderados</title>
+<!-- Tailwind CSS & Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#e7eeff",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#00513d",
+            "secondary": "#006c52",
+            "tertiary-fixed-dim": "#a5c8ff",
+            "background": "#f9f9ff",
+            "surface-container-low": "#f0f3ff",
+            "primary": "#005cae",
+            "on-primary-fixed": "#001b3c",
+            "outline": "#727783",
+            "on-primary": "#ffffff",
+            "surface": "#f9f9ff",
+            "secondary-container": "#97f1d0",
+            "surface-container-high": "#dee8ff",
+            "on-secondary-fixed": "#002117",
+            "on-primary-container": "#fefcff",
+            "on-primary-fixed-variant": "#004689",
+            "on-surface-variant": "#414752",
+            "primary-fixed": "#d5e3ff",
+            "surface-dim": "#cfdaf2",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "tertiary-container": "#4876b4",
+            "primary-container": "#2b75cd",
+            "surface-container-highest": "#d8e3fb",
+            "surface-tint": "#005eb3",
+            "inverse-primary": "#a7c8ff",
+            "on-tertiary-container": "#fefcff",
+            "tertiary": "#2b5d99",
+            "surface-variant": "#d8e3fb",
+            "primary-fixed-dim": "#a7c8ff",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#7ed7b7",
+            "on-surface": "#111c2d",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#9af4d3",
+            "inverse-on-surface": "#ecf1ff",
+            "on-tertiary-fixed": "#001c3a",
+            "inverse-surface": "#263143",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#d4e3ff",
+            "on-secondary-container": "#007056",
+            "outline-variant": "#c1c6d4",
+            "on-tertiary-fixed-variant": "#0b4782",
+            "on-background": "#111c2d",
+            "surface-bright": "#f9f9ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-3xl": "3.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.5rem",
+            "space-2xl": "2.5rem",
+            "margin-desktop": "3rem",
+            "margin-tablet": "2rem",
+            "space-2xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.75rem"
+          },
+          "fontFamily": {
+            "display-mobile": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    .soft-shadow {
+      box-shadow: 0 4px 20px -2px rgba(75, 142, 232, 0.06), 0 2px 6px -1px rgba(30, 41, 59, 0.04);
+    }
+    .soft-ambient {
+      box-shadow: 0 12px 32px -4px rgba(75, 142, 232, 0.08), 0 4px 12px -2px rgba(30, 41, 59, 0.03);
+    }
+    /* Hide scrollbar for gentle pill carousels */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Force custom styling without native select chevron conflicts */
+    select.clean-select {
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      appearance: none !important;
+      background-image: none !important;
+    }
+    select.clean-select::-ms-expand {
+      display: none !important;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex justify-center selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Mobile App Frame Container (max-w-md matching shared navigation constraints) -->
+<div class="w-full max-w-md bg-surface min-h-screen flex flex-col relative pb-32">
+<!-- Top App Bar (Shared Components Anchor & Identity) -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md px-margin-mobile py-space-sm flex items-center justify-between transition-colors">
+<div class="flex items-center gap-space-xs">
+<button aria-label="Volver atrás" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-primary text-xl">arrow_back</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<!-- EduNova Brand Isotype & Identity -->
+<div class="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-surface-container-high ring-1 ring-primary/20">
+<img alt="EduNova Isotipo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-cUhaYm7ze5MAPzM-JufJcxXp05LNey3YRP4nwHXtPZYMRs3ApZoizPf9uE35I4dVlxRNPxam4tOSLWaSLKDxb8b5D4USmUon-N4BYl3-1At50C3raw3OkUhHOv--4oAd0wcE6D8XGffZVIaruPejw6hZGp7hhzM2lL8VqSQQi1zOXGCJThgB8dtuXbOn1UUPFvbSbfZnwX1PsPBsjY0Ds9hoX9HOMoV5gvo59gq5iAbk6rXT-phE2ez-S1uYinptdA">
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight block leading-none">EduNova</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Nuevo Mensaje • Familia</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Ayuda" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">help_outline</span>
+</button>
+<!-- Apoderado Avatar: Camila Contreras (CC) -->
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md font-bold ring-2 ring-surface-container-lowest shadow-sm" title="Camila Contreras (Apoderada)">
+          CC
+        </div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin-mobile pt-space-xs space-y-space-md">
+<!-- 1. Banner Informativo: Horario de Atención Colegio (Educativo / Tranquilizador) -->
+<section class="bg-white rounded-2xl p-4 border border-[#e2e8f0] shadow-sm flex items-start gap-3.5 relative overflow-hidden">
+  <div class="w-10 h-10 rounded-full bg-[#ecfdf5] text-[#10b981] flex items-center justify-center shrink-0">
+    <span class="material-symbols-outlined text-[20px]">schedule</span>
+  </div>
+  <div class="flex-1 min-w-0">
+    <div class="flex items-center justify-between gap-2 flex-wrap">
+      <h2 class="text-[15px] font-bold text-slate-800">Horario de Atención Escolar</h2>
+      <span class="bg-[#dcfce7] text-[#15803d] text-[11px] font-semibold px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#15803d]"></span> Activo
+      </span>
+    </div>
+    <p class="text-[13px] text-slate-600 leading-relaxed mt-1">
+      Jornada docente de <strong class="font-semibold text-slate-800">08:00 a 17:30 hrs</strong>. Los mensajes enviados fuera de jornada serán leídos con calidez por los profesores al inicio de su siguiente día hábil.
+    </p>
+  </div>
+</section>
+<!-- 2. Tipo de Comunicación (Filtros específicos para familias) -->
+<section class="space-y-2">
+  <div class="flex items-center justify-between mb-2.5">
+    <div class="flex items-center gap-2 text-[13px] font-bold text-slate-700 uppercase tracking-wider">
+      <span class="material-symbols-outlined text-blue-600 text-[16px]">category</span>
+      <span class="">Tipo de Comunicación</span>
+    </div>
+    <span class="text-[12px] font-medium text-slate-500">Requerido</span>
+  </div>
+  <div class="flex flex-wrap gap-2" id="comm-types">
+    <button class="chip-item bg-[#0d599f] text-white font-medium text-[13px] px-3.5 py-2 rounded-full flex items-center gap-1.5 shadow-sm transition-all" type="button">
+      <span class="material-symbols-outlined text-[16px] material-symbols-fill">check_circle</span>
+      <span class="">Justificación Médica / Inasistencia</span>
+    </button>
+    <button class="chip-item bg-white border border-slate-200 text-slate-700 font-medium text-[13px] px-3.5 py-2 rounded-full hover:bg-slate-50 transition-all flex items-center gap-1.5" type="button">
+      <span class="material-symbols-outlined text-[16px]">psychology_alt</span>
+      <span class="">Consulta Pedagógica</span>
+    </button>
+    <button class="chip-item bg-white border border-slate-200 text-slate-700 font-medium text-[13px] px-3.5 py-2 rounded-full hover:bg-slate-50 transition-all flex items-center gap-1.5" type="button">
+      <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+      <span class="">Solicitar Reunión / Entrevista</span>
+    </button>
+    <button class="chip-item bg-white border border-slate-200 text-slate-700 font-medium text-[13px] px-3.5 py-2 rounded-full hover:bg-slate-50 transition-all flex items-center gap-1.5" type="button">
+      <span class="material-symbols-outlined text-[16px]">badge</span>
+      <span class="">Consulta Administrativa</span>
+    </button>
+  </div>
+</section>
+<!-- 3. Formulario Central: Estudiante y Destinatario Escolar -->
+<!-- 3. Tarjeta Estandarizada: Estudiante y Destinatario Escolar -->
+<section class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm space-y-3.5">
+  <!-- Encabezado de la Tarjeta -->
+  <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-[#0d599f] text-[20px]">school</span>
+      <h3 class="text-[15px] font-bold text-slate-800">Estudiante y Destinatario</h3>
+    </div>
+    <span class="bg-blue-50 text-[#0d599f] text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-blue-100/60 inline-flex items-center gap-1.5">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#15803d]"></span> Matrícula Activa
+    </span>
+  </div>
+
+  <!-- Subsección Estudiante a cargo -->
+  <div>
+    <label class="text-[12px] font-semibold text-slate-500 mb-1.5 flex items-center justify-between">
+      <span class="">Estudiante a cargo</span>
+      <span class="text-[11px] text-slate-400 font-normal">1 seleccionado</span>
+    </label>
+    <button class="w-full bg-slate-50 hover:bg-slate-100/80 border border-slate-200 rounded-xl p-3 flex items-center justify-between transition-colors cursor-pointer text-left" type="button">
+      <div class="flex items-center min-w-0">
+        <div class="w-10 h-10 rounded-full bg-blue-100 text-[#0d599f] font-bold text-xs flex items-center justify-center flex-shrink-0 mr-3 border border-blue-200/60">
+          VM
+        </div>
+        <div class="truncate">
+          <p class="text-sm font-semibold text-slate-800 truncate">Vicente Morales Silva</p>
+          <p class="text-xs text-slate-500 truncate">1° Básico B • Sala Verde</p>
+        </div>
+      </div>
+      <span class="material-symbols-outlined text-slate-400 text-[20px] flex-shrink-0 ml-2">expand_more</span>
+    </button>
+  </div>
+
+  <!-- Subsección Destinatario en el Colegio -->
+  <div class="mt-3.5 pt-3.5 border-t border-slate-100">
+    <label class="text-[12px] font-semibold text-slate-500 mb-1.5 flex items-center gap-1.5">
+      <span class="material-symbols-outlined text-primary text-[15px]">person</span>
+      <span class="">Destinatario en el Colegio</span>
+    </label>
+    <div class="relative">
+      <button class="w-full bg-slate-50 hover:bg-slate-100/80 border border-slate-200 rounded-xl p-3 flex items-center justify-between transition-colors cursor-pointer text-left" type="button">
+        <div class="flex items-center min-w-0">
+          <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mr-3 border border-emerald-200/60">
+            <span class="material-symbols-outlined text-[20px]">school</span>
+          </div>
+          <div class="truncate">
+            <p class="text-sm font-semibold text-slate-800 truncate">Prof. Marcela Venegas</p>
+            <p class="text-xs text-slate-500 truncate">Lenguaje y Comunicación • Profesora Jefe</p>
+          </div>
+        </div>
+        <span class="material-symbols-outlined text-slate-400 text-[20px] flex-shrink-0 ml-2">expand_more</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Formulario: Redacción del Mensaje y Adjuntos -->
+<section class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm space-y-4">
+  <!-- Campo Asunto -->
+  <div class="space-y-1.5">
+    <label class="text-[13px] font-semibold text-slate-700 mb-1.5 flex items-center justify-between">
+      <span class="">Asunto del mensaje</span>
+      <span class="text-[12px] font-normal text-slate-400">Claro y breve</span>
+    </label>
+    <div class="relative">
+      <input class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-[14px] text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all" placeholder="Ej. Justificación médica de inasistencia..." type="text" value="">
+    </div>
+  </div>
+
+  <!-- Cuerpo del Mensaje -->
+  <div class="space-y-1.5">
+    <div class="flex items-center justify-between mb-1.5">
+      <label class="text-[13px] font-semibold text-slate-700">Mensaje al Docente / Colegio</label>
+      <span class="text-[12px] font-normal text-slate-400" id="char-count">0 / 600</span>
+    </div>
+    <div class="relative">
+      <textarea class="w-full p-4 rounded-xl bg-white border border-slate-200 text-[14px] text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 min-h-[120px] transition-all resize-none" placeholder="Escriba su mensaje detallado aquí..." rows="4"></textarea>
+    </div>
+    <div class="flex items-center gap-1.5 text-xs text-blue-600 pt-1">
+      <span class="material-symbols-outlined text-[15px]">tips_and_updates</span>
+      <span class="text-[12px]">Consejo: Si requiere tareas de apoyo, puede indicarlo aquí.</span>
+    </div>
+  </div>
+
+  <!-- Adjuntar Comprobante o Certificado -->
+  <div class="space-y-2.5 pt-1">
+    <label class="text-[13px] font-semibold text-slate-700 flex items-center justify-between">
+      <span class="">Documento o Justificativo</span>
+      <span class="text-[12px] font-normal text-slate-400">Opcional</span>
+    </label>
+    <div class="bg-white border border-slate-200 rounded-xl p-3 flex items-center justify-between shadow-sm transition-all">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[20px]">description</span>
+        </div>
+        <div class="truncate">
+          <p class="text-[13px] font-semibold text-slate-800 truncate">Certificado_Pediatrico_Vicente.pdf</p>
+          <p class="text-[11px] text-emerald-600 font-medium">1.4 MB • Listo para enviar</p>
+        </div>
+      </div>
+      <button aria-label="Quitar archivo" class="w-7 h-7 rounded-full flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-red-50 transition-colors" type="button">
+        <span class="material-symbols-outlined text-[16px]">close</span>
+      </button>
+    </div>
+    <button class="w-full py-3 px-4 rounded-xl border-2 border-dashed border-blue-200 bg-blue-50/50 hover:bg-blue-50 text-blue-700 font-medium text-[14px] flex items-center justify-center gap-2 transition-colors cursor-pointer active:scale-[0.99]" type="button">
+      <span class="material-symbols-outlined text-[18px]">attach_file</span>
+      <span class="">Adjuntar documento o comprobante (PDF o Foto máx 10MB)</span>
+    </button>
+  </div>
+</section>
+<!-- 5. Nota de Tranquilidad y Resguardo Familiar -->
+<section class="bg-surface-container-low rounded-lg p-space-sm flex items-start gap-3 border border-secondary-fixed-dim/20">
+<div class="w-7 h-7 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-base material-symbols-fill">verified_user</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm font-semibold text-on-surface">Comunicación Oficial y Segura</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">
+            Tu mensaje será resguardado en la libreta digital oficial y recibirás una notificación cuando el docente lo revise.
+          </p>
+</div>
+</section>
+<!-- 6. Acciones Principales -->
+<section class="space-y-2 pt-1 pb-4">
+  <button class="w-full py-3.5 px-6 rounded-full bg-[#0d599f] hover:bg-[#094780] text-white font-semibold text-[15px] shadow-sm hover:shadow active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer" type="button">
+    <span class="material-symbols-outlined text-[18px]">send</span>
+    <span class="">Enviar Mensaje al Colegio</span>
+  </button>
+  <button class="w-full py-3 px-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-[14px] transition-all flex items-center justify-center gap-1.5 mt-2 cursor-pointer" type="button">
+    <span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+    <span class="">Guardar como Borrador</span>
+  </button>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Conforme al Shared Component JSON & Requerimiento Apoderados) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-center pointer-events-none pb-safe">
+<div class="w-full max-w-md bg-surface-container-lowest shadow-lg rounded-t-lg px-margin-mobile py-space-xs flex justify-around items-center pointer-events-auto border-t border-surface-container-high/50">
+<!-- Destino 1: Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary px-space-md py-space-xs transition-colors active:scale-95 group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">home</span>
+<span class="font-label-sm text-label-sm mt-0.5">Home</span>
+</a>
+<!-- Destino 2: Mensajería (Activo - Según requerimiento exacto con badge circular "3") -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-5 py-space-xs shadow-sm active:scale-95 transition-transform relative" href="#">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl material-symbols-fill">mail</span>
+<!-- Badge 3 no leídos -->
+<span class="absolute -top-1.5 -right-2.5 min-w-[18px] h-[18px] bg-error text-on-error font-label-sm text-[10px] font-bold rounded-full flex items-center justify-center px-1 shadow-sm ring-1 ring-surface-container-lowest">
+              3
+            </span>
+</div>
+<span class="font-label-sm text-label-sm mt-0.5 font-bold">Mensajería</span>
+</a>
+<!-- Destino 3: Ajustes -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary px-space-md py-space-xs transition-colors active:scale-95 group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">tune</span>
+<span class="font-label-sm text-label-sm mt-0.5">Ajustes</span>
+</a>
+</div>
+</nav>
+</div>
+<!-- Interactive Micro-interactions Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Interactive chip selector for communication types
+      const chips = document.querySelectorAll('.chip-item');
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => {
+            c.className = "chip-item flex-shrink-0 h-9 px-4 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container flex items-center gap-1.5 font-label-md text-label-md transition-all active:scale-95";
+            const icon = c.querySelector('.material-symbols-outlined');
+            if (icon) {
+              icon.classList.remove('material-symbols-fill');
+              if (icon.textContent === 'check_circle') {
+                icon.textContent = 'chat_bubble_outline';
+              }
+            }
+          });
+
+          // Activate clicked chip
+          chip.className = "chip-item flex-shrink-0 h-9 px-4 rounded-full bg-primary/10 text-primary ring-1.5 ring-primary flex items-center gap-1.5 font-label-md text-label-md font-bold transition-all active:scale-95 shadow-sm";
+          let icon = chip.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.textContent = 'check_circle';
+            icon.classList.add('material-symbols-fill');
+          }
+        });
+      });
+
+      // Textarea dynamic counter
+      const textarea = document.querySelector('textarea');
+      const counter = document.getElementById('char-count');
+      if (textarea && counter) {
+        textarea.addEventListener('input', (e) => {
+          const len = e.target.value.length;
+          counter.textContent = `${len} / 600`;
+          if (len > 550) {
+            counter.classList.add('text-error');
+          } else {
+            counter.classList.remove('text-error');
+          }
+        });
+      }
+    });
+  </script>
+
+
+</body></html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>EduNova - Redactar Mensaje Institucional</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Plus Jakarta Sans Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#e7eeff",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#00513d",
+            "secondary": "#006c52",
+            "tertiary-fixed-dim": "#a5c8ff",
+            "background": "#f9f9ff",
+            "surface-container-low": "#f0f3ff",
+            "primary": "#005cae",
+            "on-primary-fixed": "#001b3c",
+            "outline": "#727783",
+            "on-primary": "#ffffff",
+            "surface": "#f9f9ff",
+            "secondary-container": "#97f1d0",
+            "surface-container-high": "#dee8ff",
+            "on-secondary-fixed": "#002117",
+            "on-primary-container": "#fefcff",
+            "on-primary-fixed-variant": "#004689",
+            "on-surface-variant": "#414752",
+            "primary-fixed": "#d5e3ff",
+            "surface-dim": "#cfdaf2",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "tertiary-container": "#4876b4",
+            "primary-container": "#2b75cd",
+            "surface-container-highest": "#d8e3fb",
+            "surface-tint": "#005eb3",
+            "inverse-primary": "#a7c8ff",
+            "on-tertiary-container": "#fefcff",
+            "tertiary": "#2b5d99",
+            "surface-variant": "#d8e3fb",
+            "primary-fixed-dim": "#a7c8ff",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#7ed7b7",
+            "on-surface": "#111c2d",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#9af4d3",
+            "inverse-on-surface": "#ecf1ff",
+            "on-tertiary-fixed": "#001c3a",
+            "inverse-surface": "#263143",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#d4e3ff",
+            "on-secondary-container": "#007056",
+            "outline-variant": "#c1c6d4",
+            "on-tertiary-fixed-variant": "#0b4782",
+            "on-background": "#111c2d",
+            "surface-bright": "#f9f9ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-3xl": "3.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.5rem",
+            "space-2xl": "2.5rem",
+            "margin-desktop": "3rem",
+            "margin-tablet": "2rem",
+            "space-2xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.75rem"
+          },
+          "fontFamily": {
+            "display-mobile": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f9f9ff;
+      color: #111c2d;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .ambient-card {
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px -2px rgba(75, 142, 232, 0.06), 0 2px 6px -1px rgba(30, 41, 59, 0.04);
+      border-radius: 1.5rem;
+    }
+    .ambient-halo:focus-within {
+      box-shadow: 0 0 0 3px rgba(75, 142, 232, 0.2);
+    }
+    .pb-safe {
+      padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 4.5rem);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-fixed">
+<!-- Mobile Viewport Container -->
+<div class="max-w-md mx-auto min-h-screen flex flex-col relative bg-surface">
+<!-- 1. Header / Top App Bar (TopAppBar anchor implementation) -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md px-margin-mobile h-16 flex items-center justify-between">
+<div class="flex items-center space-x-space-sm">
+<button aria-label="Volver" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container active:scale-95 transition-all text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<div class="flex items-center space-x-space-2xs">
+<img alt="EduNova" class="w-7 h-7 object-contain rounded-full shadow-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDqdFcvuN_pnOO4OOfSRA9F-g4hFiAu-CnyIh7rbdYCKV3y4r-bpGVPbfBZxboqRF383g26H5RuxgwZ0oE_IkClG3JRQRq_zQRaJiSL2oZzSTg6a0CY7AH9CJMqtO0tYGR4jYGJDOddEVYITktA_sls3CX3hb9tSs5yrXgoAs1ahyIGqFXYkmCzSFMSY49YplWYNkeZeZkbhScJNEz9HXdEmAvpu61lJ536dn61pjiodRFbS2lMVdNziN0Jo5aEA8s5A">
+<div>
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary leading-none tracking-tight">EduNova</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium mt-0.5">Emisión Oficial • Inspectoría General</p>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-space-xs">
+<button aria-label="Ayuda" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-container active:scale-95 transition-all text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[22px]">help_outline</span>
+</button>
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center font-bold tracking-tight shadow-sm">
+          IG
+        </div>
+</div>
+</header>
+<!-- Main Scrollable Form Content -->
+<main class="flex-1 px-margin-mobile pt-space-xs pb-safe flex flex-col gap-space-md">
+<!-- 2. Banner de Régimen y Protocolo Institucional -->
+<section class="bg-white rounded-2xl p-4 border border-[#e2e8f0] shadow-sm flex items-start gap-3.5 relative overflow-hidden">
+  <div class="w-10 h-10 rounded-full bg-[#ecfdf5] text-[#10b981] flex items-center justify-center shrink-0">
+    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">schedule</span>
+  </div>
+  <div class="flex-1">
+    <div class="flex items-center justify-between flex-wrap gap-2">
+      <h2 class="text-[15px] font-bold text-slate-800">Jornada Administrativa</h2>
+      <span class="bg-[#dcfce7] text-[#15803d] text-[11px] font-semibold px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#15803d]"></span> Activa (08:00 – 18:00 hrs)
+      </span>
+    </div>
+    <p class="text-[13px] text-slate-600 leading-relaxed mt-1">
+      Comunicaciones oficiales vinculantes resguardadas bajo <span class="font-semibold text-slate-800">reglamento interno de convivencia escolar</span> y marco regulatorio MINEDUC.
+    </p>
+  </div>
+</section>
+<!-- 3. Tipo de Comunicación (Chips seleccionables) -->
+<section class="flex flex-col">
+  <div class="flex items-center justify-between mb-2.5">
+    <label class="flex items-center gap-2 text-[13px] font-bold text-slate-700 uppercase tracking-wider">
+      <span class="material-symbols-outlined w-4 h-4 text-blue-600 text-[18px] flex items-center justify-center">category</span>
+      Tipo de Comunicación Oficial
+    </label>
+    <span class="text-[12px] font-medium text-slate-500">Requerido</span>
+  </div>
+  <div class="flex flex-wrap gap-2">
+    <button class="bg-[#0d599f] text-white font-medium text-[13px] px-3.5 py-2 rounded-full flex items-center gap-1.5 shadow-sm transition-all" type="button">
+      <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+      Citación Formal a Apoderado
+    </button>
+    <button class="bg-white border border-slate-200 text-slate-700 font-medium text-[13px] px-3.5 py-2 rounded-full hover:bg-slate-50 transition-all flex items-center gap-1.5" type="button">
+      Circular Oficial / Informativo
+    </button>
+    <button class="bg-white border border-slate-200 text-slate-700 font-medium text-[13px] px-3.5 py-2 rounded-full hover:bg-slate-50 transition-all flex items-center gap-1.5" type="button">
+      Notificación Asistencia Crítica
+    </button>
+    <button class="bg-white border border-slate-200 text-slate-700 font-medium text-[13px] px-3.5 py-2 rounded-full hover:bg-slate-50 transition-all flex items-center gap-1.5" type="button">
+      Resolución Convivencia Escolar
+    </button>
+  </div>
+</section>
+<!-- 4. Nivel y Alcance de Destinatarios (Selector jerárquico) -->
+<section class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-3.5">
+  <div class="flex items-center justify-between">
+    <label class="flex items-center gap-1.5 text-[15px] font-bold text-slate-800 leading-none">
+      <span class="material-symbols-outlined text-[#0d599f] text-[20px]">groups</span>
+      Alcance de Destinatarios
+    </label>
+    <span class="bg-blue-50 text-[#0d599f] text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-blue-200 inline-flex items-center gap-1.5">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#0d599f]"></span>
+      Individual
+    </span>
+  </div>
+  <div class="bg-slate-100 p-1 rounded-xl flex gap-1">
+    <button class="text-slate-600 hover:text-slate-900 rounded-lg py-1.5 px-3 text-[12px] font-medium flex-1 text-center transition-colors" type="button">
+      Establecimiento
+    </button>
+    <button class="text-slate-600 hover:text-slate-900 rounded-lg py-1.5 px-3 text-[12px] font-medium flex-1 text-center transition-colors" type="button">
+      Curso (1° M. A)
+    </button>
+    <button class="bg-[#0d599f] text-white shadow-xs rounded-lg py-1.5 px-3 text-[12px] font-semibold flex-1 text-center" type="button">
+      Estudiante / Apod.
+    </button>
+  </div>
+  <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center justify-between shadow-sm hover:bg-slate-100/80 transition-colors cursor-pointer">
+    <div class="flex items-center min-w-0 flex-1">
+      <div class="w-10 h-10 rounded-full bg-blue-100 text-[#0d599f] font-bold text-[12px] flex items-center justify-center shrink-0 mr-3 border border-blue-200/60">
+        VM
+      </div>
+      <div class="min-w-0 flex-1">
+        <p class="text-[14px] font-semibold text-slate-800 leading-snug truncate">Vicente Morales Silva</p>
+        <p class="text-[12px] text-slate-500 leading-none truncate mt-0.5">Apoderada: Camila Contreras • 1° Medio A</p>
+      </div>
+    </div>
+    <span class="material-symbols-outlined text-slate-400 text-[20px] shrink-0 ml-2">expand_more</span>
+  </div>
+</section>
+<!-- 5. Asunto Oficial & Folio -->
+<section class="flex flex-col">
+  <div class="text-[13px] font-semibold text-slate-700 mb-1.5 flex items-center justify-between">
+    <label for="asunto-oficial" class="flex items-center gap-1.5 text-slate-800 font-semibold">
+      Asunto Oficial
+    </label>
+    <span class="text-[11px] font-bold text-blue-700 bg-blue-50 border border-blue-100 px-2.5 py-0.5 rounded-full tracking-wide">
+      Folio #2024-INSP-089
+    </span>
+  </div>
+  <input id="asunto-oficial" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-[14px] text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all" placeholder="Ej. Citación formal por porcentaje de asistencia crítica..." type="text" value="">
+</section>
+<!-- 6. Contenido de la Notificación & Plantillas -->
+<section class="flex flex-col">
+  <div class="text-[13px] font-semibold text-slate-700 mb-1.5 flex items-center justify-between">
+    <label for="cuerpo-comunicado" class="flex items-center gap-1.5 text-slate-800 font-semibold">
+      <span class="material-symbols-outlined text-[18px] text-blue-600">edit_note</span>
+      Cuerpo del Comunicado
+    </label>
+    <div class="flex items-center gap-1.5"><button class="bg-blue-50 hover:bg-blue-100 text-blue-700 font-medium text-[12px] px-3 py-1 rounded-full border border-blue-200/60 inline-flex items-center gap-1.5 shadow-xs transition-colors cursor-pointer" type="button"><span class="material-symbols-outlined text-[15px] text-blue-600">auto_awesome</span>Plantillas Oficiales</button></div>
+  </div>
+  <textarea id="cuerpo-comunicado" class="w-full p-4 rounded-xl bg-white border border-slate-200 text-[14px] text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 min-h-[120px] transition-all resize-none" placeholder="Escriba aquí la comunicación oficial..." rows="5"></textarea>
+</section>
+<!-- 7. Documentos Adjuntos -->
+<section class="">
+  <button class="w-full py-3 px-4 rounded-xl border-2 border-dashed border-blue-200 bg-blue-50/50 hover:bg-blue-50 text-blue-700 font-medium text-[14px] flex items-center justify-center gap-2 transition-colors cursor-pointer active:scale-[0.99]" type="button">
+    <span class="material-symbols-outlined text-[18px]">attach_file</span>
+    <span class="">Adjuntar acta oficial, anexo o circular en PDF (máx 10MB)</span>
+  </button>
+</section>
+<!-- 8. Opciones Avanzadas de Gestión Institucional -->
+<section class="ambient-card p-space-md flex flex-col gap-space-md">
+<p class="font-label-md text-label-md font-bold text-on-surface uppercase tracking-wider text-[11px] text-outline">
+          Protocolos de Gestión y Despacho
+        </p>
+<!-- Switch 1 -->
+<div class="flex items-center justify-between">
+<div class="pr-space-sm">
+<p class="font-label-md text-label-md font-semibold text-on-surface">Cuidar descanso institucional</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Notificar a familias estrictamente en horario hábil pedagógico.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-12 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Switch 2 -->
+<div class="flex items-center justify-between border-t border-surface-container-highest/60 pt-space-sm">
+<div class="pr-space-sm">
+<p class="font-label-md text-label-md font-semibold text-on-surface">Confirmación obligatoria</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Exigir acuse de lectura y firma digital del apoderado.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-12 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Checkbox 1 -->
+<div class="flex items-start space-x-space-sm border-t border-surface-container-highest/60 pt-space-sm">
+<input checked="" class="w-5 h-5 rounded text-secondary focus:ring-0 focus:ring-offset-0 mt-0.5 border-outline-variant cursor-pointer" id="libro-digital" type="checkbox">
+<label class="font-body-sm text-body-sm text-on-surface leading-snug cursor-pointer" for="libro-digital">
+            Registrar copia automática en <span class="font-bold">Libro de Clases Digital</span> y en Ficha de Convivencia del Alumno.
+          </label>
+</div>
+</section>
+<!-- 9. Acciones Principales -->
+<section class="flex flex-col pt-1">
+  <button class="w-full py-3.5 px-6 rounded-full bg-[#0d599f] hover:bg-[#094780] text-white font-semibold text-[15px] shadow-sm hover:shadow active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer" type="button">
+    <span class="material-symbols-outlined text-[18px]">send</span>
+    <span class="">Emitir Comunicado Oficial</span>
+  </button>
+  <button class="w-full py-3 px-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-[14px] transition-all flex items-center justify-center gap-1.5 mt-2 cursor-pointer" type="button">
+    <span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+    <span class="">Guardar Borrador Institucional</span>
+  </button>
+</section>
+</main>
+<!-- 10. Barra de Navegación Inferior Homologada (BottomNavBar Blueprint) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest shadow-sm">
+<div class="max-w-md mx-auto flex justify-around items-center px-margin-mobile py-space-xs">
+<!-- Tab 1: Gestión Alumnos -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]">school</span>
+<span class="font-label-sm text-label-sm font-medium mt-0.5">Gestión Alumnos</span>
+</button>
+<!-- Tab 2: Mensajería (Activo con badge rojo) -->
+<button class="relative flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-space-md py-space-xs active:scale-95 transition-transform shadow-sm" type="button">
+<div class="relative">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">mail</span>
+<!-- Badge 3 -->
+<span class="absolute -top-1 -right-2 bg-error text-on-error font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+              3
+            </span>
+</div>
+<span class="font-label-sm text-label-sm font-bold mt-0.5">Mensajería</span>
+</button>
+<!-- Tab 3: Ajustes -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+<span class="font-label-sm text-label-sm font-medium mt-0.5">Ajustes</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

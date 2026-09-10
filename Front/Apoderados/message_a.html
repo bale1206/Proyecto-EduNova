@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduNova - Mensajería Institucional Apoderados</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#002117",
+          "primary": "#005cae",
+          "inverse-surface": "#263143",
+          "tertiary-fixed-dim": "#a5c8ff",
+          "surface-container": "#e7eeff",
+          "tertiary-fixed": "#d4e3ff",
+          "on-error-container": "#93000a",
+          "secondary": "#006c52",
+          "surface-tint": "#005eb3",
+          "on-error": "#ffffff",
+          "on-secondary": "#ffffff",
+          "error-container": "#ffdad6",
+          "surface-variant": "#d8e3fb",
+          "inverse-on-surface": "#ecf1ff",
+          "surface": "#f9f9ff",
+          "secondary-fixed-dim": "#7ed7b7",
+          "inverse-primary": "#a7c8ff",
+          "background": "#f9f9ff",
+          "surface-container-low": "#f0f3ff",
+          "on-tertiary-container": "#fefcff",
+          "on-primary-fixed": "#001b3c",
+          "on-tertiary-fixed": "#001c3a",
+          "secondary-fixed": "#9af4d3",
+          "on-secondary-fixed-variant": "#00513d",
+          "surface-bright": "#f9f9ff",
+          "on-tertiary": "#ffffff",
+          "on-secondary-container": "#007056",
+          "on-primary-container": "#fefcff",
+          "error": "#ba1a1a",
+          "primary-fixed-dim": "#a7c8ff",
+          "secondary-container": "#97f1d0",
+          "on-primary": "#ffffff",
+          "on-surface-variant": "#414752",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-high": "#dee8ff",
+          "surface-container-highest": "#d8e3fb",
+          "on-tertiary-fixed-variant": "#0b4782",
+          "outline-variant": "#c1c6d4",
+          "on-primary-fixed-variant": "#004689",
+          "primary-fixed": "#d5e3ff",
+          "on-surface": "#111c2d",
+          "on-background": "#111c2d",
+          "tertiary": "#2b5d99",
+          "outline": "#727783",
+          "tertiary-container": "#4876b4",
+          "primary-container": "#2b75cd",
+          "surface-dim": "#cfdaf2"
+        },
+        "borderRadius": {
+          "DEFAULT": "1rem",
+          "lg": "2rem",
+          "xl": "3rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xl": "2rem",
+          "margin-desktop": "3rem",
+          "space-md": "1rem",
+          "margin-mobile": "1.25rem",
+          "space-sm": "0.75rem",
+          "space-2xs": "0.25rem",
+          "space-lg": "1.5rem",
+          "margin-tablet": "2rem",
+          "space-3xl": "3.5rem",
+          "gutter": "1rem",
+          "space-xs": "0.5rem",
+          "space-2xl": "2.5rem"
+        },
+        "fontFamily": {
+          "label-lg": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "display-mobile": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "display": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "label-lg": ["15px", {"lineHeight": "20px", "fontWeight": "600"}],
+          "body-md": ["15px", {"lineHeight": "22px", "fontWeight": "400"}],
+          "label-md": ["13px", {"lineHeight": "16px", "fontWeight": "600"}],
+          "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+          "display-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+          "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+          "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+          "display": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+          "body-lg": ["17px", {"lineHeight": "26px", "fontWeight": "400"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .shadow-xs {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-surface-variant selection:text-primary min-h-screen pb-24 font-['Plus_Jakarta_Sans']">
+<!-- 1. HEADER (Top App Bar) -->
+<header class="bg-surface sticky top-0 z-40 border-b border-surface-container/60 backdrop-blur-md bg-opacity-95">
+<div class="flex justify-between items-center w-full px-4 max-w-md mx-auto h-16">
+<button aria-label="Volver" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+</button>
+<div class="flex items-center">
+<img alt="EduNova Logo" class="w-7 h-7 rounded-full object-cover shadow-xs mr-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG0FQwRga24j3JslfSP_zJKwhHvp4JscUo1_UUKWtTuc6AnvxWB0zet7ZpDCBSpiuDRpcNUJ5maDcshDJi70r_KW9MeYZzi7w9DpJZlHodE4gR9MVSjMgSWGXCld07Qj3rNA9sQ-wJ0bWmjkO-XeJez2SMc5cRef4M9ZwfNVDxnJl84T0iIEs9Cc3ZlLu7yJvYZypdX19dc3ousTgVqEI0xhg5oRHHyLzqIHTEG_1LWf2xdiDshQIUkjg3ZsM0CsGbYA"/>
+<div class="text-left">
+<span class="font-bold text-lg text-primary tracking-tight leading-tight block">EduNova</span>
+<span class="text-[11px] font-medium text-outline block leading-none">Familia y Apoderados</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Ayuda" class="w-9 h-9 rounded-full flex items-center justify-center text-outline hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">help_outline</span>
+</button>
+<div class="w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold text-xs flex items-center justify-center border border-primary/20">
+        CC
+      </div>
+</div>
+</div>
+</header>
+<!-- Main Parent Communications Hub Content -->
+<main class="max-w-md mx-auto px-4 space-y-3.5 pt-3">
+<!-- 2. BANNER DE JORNADA INSTITUCIONAL -->
+<div class="rounded-2xl p-4 bg-surface-container-low border border-outline-variant/30 flex items-start gap-3 shadow-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block animate-pulse"></span>
+<span class="text-xs font-semibold text-on-surface">Horario Protegido (08:00 – 17:30 hrs)</span>
+</div>
+<p class="text-[11px] text-outline leading-relaxed mt-1">
+        Mensajes fuera de jornada quedan programados para el siguiente día hábil, cuidando el descanso docente y familiar.
+      </p>
+</div>
+</div>
+<!-- 3. BOTÓN PRINCIPAL DE ACCIÓN (CTA) -->
+<div>
+<button class="w-full h-12 bg-primary hover:bg-primary/90 active:scale-[0.99] text-on-primary font-medium text-sm rounded-full flex items-center justify-center gap-2 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_square</span>
+<span>+ Redactar mensaje a docente o inspectoría</span>
+</button>
+</div>
+<!-- 4. BUSCADOR Y BOTÓN DE FILTRO -->
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[19px]">search</span>
+<input class="w-full h-11 pl-10 pr-4 bg-surface-container-lowest border border-outline-variant/40 rounded-full text-xs text-on-surface placeholder:text-outline focus:outline-none focus:border-primary" placeholder="Buscar por docente, asignatura o circular..." type="text"/>
+</div>
+<button aria-label="Filtros" class="w-11 h-11 rounded-full bg-surface-container-lowest border border-outline-variant/40 flex items-center justify-center text-outline hover:bg-surface-container transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<!-- 5. FILTROS EN PÍLDORAS -->
+<div class="space-y-1.5 pt-0.5">
+<div class="flex items-center justify-between px-1">
+<span class="text-[11px] font-bold text-outline tracking-wider uppercase">ESTUDIANTES ASOCIADOS Y FILTROS</span>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto py-0.5 no-scrollbar text-nowrap">
+<button class="rounded-full px-3.5 py-1.5 bg-primary text-on-primary text-xs font-medium flex items-center gap-1.5 shadow-xs" type="button">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Todos (Vicente M.)</span>
+</button>
+<button class="rounded-full px-3.5 py-1.5 bg-surface-container-lowest border border-outline-variant/40 text-outline text-xs font-medium hover:bg-surface-container transition-colors" type="button">
+<span>Docentes</span>
+</button>
+<button class="rounded-full px-3.5 py-1.5 bg-surface-container-lowest border border-outline-variant/40 text-outline text-xs font-medium hover:bg-surface-container transition-colors" type="button">
+<span>Inspectoría</span>
+</button>
+<button class="rounded-full px-3.5 py-1.5 bg-surface-container-lowest border border-outline-variant/40 text-outline text-xs font-medium hover:bg-surface-container transition-colors" type="button">
+<span>Circulares</span>
+</button>
+</div>
+</div>
+<!-- 6. PESTAÑAS DE SECCIÓN -->
+<div class="flex items-center border-b border-surface-container-high px-1 pt-1 gap-6">
+<button class="text-xs font-bold text-primary pb-2 border-b-2 border-primary flex items-center gap-1.5" type="button">
+<span>Recibidos</span>
+<span class="px-1.5 py-0.2 bg-error text-on-error text-[10px] font-bold rounded-full">2</span>
+</button>
+<button class="text-xs font-medium text-outline pb-2 hover:text-on-surface transition-colors" type="button">
+<span>Enviados</span>
+</button>
+<button class="text-xs font-medium text-outline pb-2 hover:text-on-surface transition-colors" type="button">
+<span>Comunicaciones oficiales</span>
+</button>
+</div>
+<!-- 7. TARJETAS DE MENSAJES -->
+<div class="space-y-3 pt-0.5">
+<!-- Card 1: Prof. Marcela Venegas -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-xs flex flex-col gap-3">
+<!-- Cabecera de tarjeta -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="rounded-full w-11 h-11 border border-outline-variant/40 overflow-hidden relative bg-primary-fixed/60 text-primary flex items-center justify-center font-bold text-xs shrink-0">
+<span>MV</span>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-secondary rounded-full border-2 border-surface-container-lowest"></span>
+</div>
+<div>
+<h3 class="text-sm font-bold text-on-surface leading-tight">Prof. Marcela Venegas</h3>
+<p class="text-xs text-outline mt-0.5">Lenguaje y Comunicación • Hoy 10:15 hrs</p>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-amber-100 text-amber-800 shrink-0">
+          Prioridad media
+        </span>
+</div>
+<!-- Contenedor interior del mensaje -->
+<div class="bg-surface-container-low/60 rounded-xl p-3 border border-outline-variant/20">
+<div class="flex items-center gap-1.5 mb-1 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">forum</span>
+<p class="text-xs font-bold text-on-surface">Coordinación de entrevista pedagógica</p>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+          Estimada familia de Vicente: Junto con saludar cordialmente, me gustaría concordar nuestro horario de reunión trimestral para este jueves 19 en bloque de atención de apoderados.
+        </p>
+</div>
+<!-- Pie de tarjeta -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-1.5 text-secondary text-xs font-medium">
+<span class="material-symbols-outlined text-[16px]">event</span>
+<span>Cita programada</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="rounded-full px-3.5 py-1.5 text-xs font-medium flex items-center gap-1.5 bg-secondary-fixed text-on-secondary-fixed-variant hover:bg-secondary-fixed-dim transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">reply</span>
+<span>Responder en horario hábil</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Inspectoría General -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-xs flex flex-col gap-3">
+<!-- Cabecera de tarjeta -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="rounded-full w-11 h-11 border border-outline-variant/40 overflow-hidden relative bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-secondary rounded-full border-2 border-surface-container-lowest"></span>
+</div>
+<div>
+<h3 class="text-sm font-bold text-on-surface leading-tight">Inspectoría General</h3>
+<p class="text-xs text-outline mt-0.5">Unidad de Asistencia • Ayer 15:40 hrs</p>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-blue-100 text-blue-800 shrink-0">
+          Oficial / Confirmado
+        </span>
+</div>
+<!-- Contenedor interior del mensaje -->
+<div class="bg-surface-container-low/60 rounded-xl p-3 border border-outline-variant/20">
+<div class="flex items-center gap-1.5 mb-1 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+<p class="text-xs font-bold text-on-surface">Justificación médica validada</p>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+          Se ha recibido y validado en el sistema escolar el certificado médico de Vicente Morales. Los docentes de las asignaturas correspondientes han sido informados para recalendarización.
+        </p>
+</div>
+<!-- Pie de tarjeta -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-1.5 text-outline text-xs font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Validado en registro</span>
+</div>
+<button class="rounded-full px-3.5 py-1.5 text-xs font-medium flex items-center gap-1.5 bg-surface-variant text-primary hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">visibility</span>
+<span>Ver comprobante</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Prof. Carlos Soto -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 shadow-xs flex flex-col gap-3">
+<!-- Cabecera de tarjeta -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="rounded-full w-11 h-11 border border-outline-variant/40 overflow-hidden relative bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center font-bold text-xs shrink-0">
+<span>CS</span>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-secondary rounded-full border-2 border-surface-container-lowest"></span>
+</div>
+<div>
+<h3 class="text-sm font-bold text-on-surface leading-tight">Prof. Carlos Soto</h3>
+<p class="text-xs text-outline mt-0.5">Matemáticas • 12 Oct</p>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-cyan-100 text-cyan-800 shrink-0">
+          Nuevo aviso
+        </span>
+</div>
+<!-- Contenedor interior del mensaje -->
+<div class="bg-surface-container-low/60 rounded-xl p-3 border border-outline-variant/20">
+<div class="flex items-center gap-1.5 mb-1 text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-tertiary">menu_book</span>
+<p class="text-xs font-bold text-on-surface">Refuerzo académico sugerido</p>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+          Estimados apoderados: Comparto un set didáctico de geometría para ejercitar de forma voluntaria en casa previo a la evaluación sumativa de la próxima semana.
+        </p>
+</div>
+<!-- Pie de tarjeta -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-1.5 text-outline text-xs font-medium">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+<span>Espera: 1h</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="rounded-full px-3.5 py-1.5 text-xs font-medium flex items-center gap-1.5 bg-primary text-on-primary hover:bg-primary/90 transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-[15px]">done_all</span>
+<span>Confirmar lectura</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Banner inferior de confianza y comunidad -->
+<div class="pt-2 pb-4 text-center px-2">
+<div class="inline-flex items-center gap-1.5 bg-surface-container-low border border-outline-variant/30 px-3.5 py-1.5 rounded-full text-outline text-[11px]">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span>EduNova vela por una comunicación respetuosa y formal entre escuela y hogar</span>
+</div>
+</div>
+</main>
+<!-- 8. BARRA DE NAVEGACIÓN INFERIOR (Bottom Navigation Bar) -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto h-16 bg-surface-container-lowest/95 backdrop-blur-md border-t border-outline-variant/30 px-6 flex items-center justify-between z-50">
+<!-- Ítem 1 (Home) -->
+<button class="flex flex-col items-center justify-center w-16 text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[11px] font-medium mt-0.5">Home</span>
+</button>
+<!-- Ítem 2 (Mensajería - ACTIVO) -->
+<button class="flex flex-col items-center justify-center" type="button">
+<div class="relative bg-primary text-on-primary rounded-full px-5 py-1.5 flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span class="text-xs font-medium tracking-tight">Mensajería</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-error text-on-error text-[9px] font-bold rounded-full flex items-center justify-center ring-2 ring-surface-container-lowest">3</span>
+</div>
+</button>
+<!-- Ítem 3 (Ajustes) -->
+<button class="flex flex-col items-center justify-center w-16 text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+<span class="text-[11px] font-medium mt-0.5">Ajustes</span>
+</button>
+</nav>
+</body></html>
