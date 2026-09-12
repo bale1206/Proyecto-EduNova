@@ -9,13 +9,18 @@ entorno real antes de entregártelo** (1326 módulos, cero errores) — no
 escrito a mano y "con suerte", que fue lo que causó los errores de Metro que
 tuviste la vez anterior.
 
+## 0. Instalar node y npm
+se dejara el executable en la carpeta de capston
+la versiones a utilizar son 
+node: 24.20.0
+npm: 11.19.0
+
 ## 1. Cómo ejecutarlo
 
 ```bash
 npm install
 npx expo start
-```
-
+```  
 Presiona `w` para una vista previa en el navegador, o escanea el código QR
 con la app gratuita **Expo Go** en tu teléfono. No se necesitan cuentas
 pagadas.
