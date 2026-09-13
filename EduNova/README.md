@@ -1,4 +1,4 @@
-# EduNova
+# EduNova Web
 
 Plataforma web de comunicación colegio-familia. Frontend con **HTMX + Alpine.js
 + Tailwind (CDN)**, backend con **Django**.
