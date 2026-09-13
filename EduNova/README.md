@@ -11,7 +11,7 @@ integración con un colegio real todavía.
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate        # en Windows: venv\Scripts\activate
+venv\Scripts\activate
 pip install -r requirements.txt
 
 python manage.py migrate
