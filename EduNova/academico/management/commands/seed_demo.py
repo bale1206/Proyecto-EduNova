@@ -29,6 +29,15 @@ class Command(BaseCommand):
             apoderado.set_password('edunova123')
             apoderado.save()
 
+        director, creado = Usuario.objects.get_or_create(
+            rut='33333333-3', defaults=dict(
+                first_name='Soledad', apellidos='Ibáñez', email='soledad.ibanez@edunova.cl',
+                telefono='+56933333333', rol=Usuario.Rol.ADMINISTRATIVO,
+            ))
+        if creado:
+            director.set_password('edunova123')
+            director.save()
+
         curso, _ = Curso.objects.get_or_create(grado_curso='5° Básico A', docente_jefe=docente)
 
         est1, _ = Estudiante.objects.get_or_create(
@@ -72,6 +81,7 @@ class Command(BaseCommand):
 
         self.stdout.write(self.style.SUCCESS(
             'Datos de demostración creados.\n'
-            'Docente  -> RUT 11111111-1 / clave edunova123\n'
-            'Apoderado-> RUT 22222222-2 / clave edunova123'
+            'Docente      -> RUT 11111111-1 / clave edunova123\n'
+            'Apoderado    -> RUT 22222222-2 / clave edunova123\n'
+            'Administrativo -> RUT 33333333-3 / clave edunova123'
         ))

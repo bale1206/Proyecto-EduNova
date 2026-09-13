@@ -1,6 +1,7 @@
 import calendar as cal
 from datetime import date
 
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, redirect, render
@@ -8,6 +9,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from comunicacion.services import mensajes_no_leidos
 from usuarios.models import Usuario
 
+from .forms import CursoForm, EventoForm
 from .models import Asistencia, Curso, Estudiante, Evento
 
 MESES_ES = [
@@ -155,3 +157,60 @@ def detalle_estudiante(request, estudiante_id):
     if request.headers.get('HX-Request'):
         return render(request, 'academico/_calendario.html', contexto)
     return render(request, 'academico/detalle_estudiante.html', contexto)
+
+
+@login_required
+def home_administrativo(request):
+    _requerir_rol(request, Usuario.Rol.ADMINISTRATIVO)
+
+    cursos = Curso.objects.select_related('docente_jefe').all()
+
+    year, month = _mes_actual_o_parametro(request)
+    (prev_y, prev_m), (next_y, next_m) = _mes_anterior_siguiente(year, month)
+    eventos_mes = Evento.objects.filter(fecha__year=year, fecha__month=month).select_related('curso')
+    semanas = _construir_calendario(year, month, eventos_mes)
+
+    contexto = {
+        'cursos': cursos,
+        'total_estudiantes': Estudiante.objects.count(),
+        'proximos_eventos': Evento.objects.filter(fecha__gte=date.today()).select_related('curso').order_by('fecha', 'hora_inicio')[:8],
+        'curso_form': CursoForm(),
+        'evento_form': EventoForm(),
+        'semanas': semanas,
+        'mes_nombre': MESES_ES[month],
+        'anio': year,
+        'mes': month,
+        'prev_year': prev_y, 'prev_month': prev_m,
+        'next_year': next_y, 'next_month': next_m,
+    }
+    if request.headers.get('HX-Request'):
+        return render(request, 'academico/_calendario.html', contexto)
+    return render(request, 'academico/home_administrativo.html', contexto)
+
+
+@login_required
+def crear_curso(request):
+    _requerir_rol(request, Usuario.Rol.ADMINISTRATIVO)
+    if request.method == 'POST':
+        form = CursoForm(request.POST)
+        if form.is_valid():
+            curso = form.save()
+            messages.success(request, f'Curso "{curso.grado_curso}" creado.')
+            return redirect('academico:home_administrativo')
+        messages.error(request, 'Revisa los datos del curso: ' + '; '.join(form.errors))
+    return redirect('academico:home_administrativo')
+
+
+@login_required
+def crear_evento(request):
+    _requerir_rol(request, Usuario.Rol.ADMINISTRATIVO)
+    if request.method == 'POST':
+        form = EventoForm(request.POST)
+        if form.is_valid():
+            evento = form.save(commit=False)
+            evento.creado_por = request.user
+            evento.save()
+            messages.success(request, f'"{evento.titulo}" agendado para {evento.curso}.')
+            return redirect('academico:home_administrativo')
+        messages.error(request, 'Revisa los datos del evento: ' + '; '.join(form.errors))
+    return redirect('academico:home_administrativo')

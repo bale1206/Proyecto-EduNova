@@ -1,4 +1,4 @@
-# EduNova Web
+# EduNova
 
 Plataforma web de comunicación colegio-familia. Frontend con **HTMX + Alpine.js
 + Tailwind (CDN)**, backend con **Django**.
@@ -23,19 +23,51 @@ Abrir http://127.0.0.1:8000/
 
 ## Usuarios de prueba (creados por `seed_demo`)
 
-| Rol       | RUT          | Clave        |
-|-----------|--------------|--------------|
-| Docente   | 11111111-1   | edunova123   |
-| Apoderado | 22222222-2   | edunova123   |
+| Rol           | RUT          | Clave        |
+|---------------|--------------|--------------|
+| Docente       | 11111111-1   | edunova123   |
+| Apoderado     | 22222222-2   | edunova123   |
+| Administrativo| 33333333-3   | edunova123   |
 
-También puedes crear un superusuario para entrar a `/admin/`:
+Además, el `db.sqlite3` que se entrega ya trae un superusuario de prueba
+creado durante el desarrollo — no hace falta correr nada para usarlo:
+
+| Rol           | RUT          | Clave        |
+|---------------|--------------|--------------|
+| Administrador | 10101010-1   | admin12345   |
+
+⚠️ Es una cuenta de prueba con clave débil. Antes de mostrarle el proyecto a
+un cliente real, bórrala (o cámbiale la clave) desde `/admin/` y crea tu
+propio superusuario:
 
 ```bash
 python manage.py createsuperuser
 ```
 
-(al pedir el RUT como "username", ingresa un RUT válido igual que en el resto
-del sistema).
+Pedirá RUT, correo, nombre y apellidos — **no** pregunta por el rol: se
+asigna automáticamente como `administrador`, que es el único rol permitido
+para un superusuario.
+
+## Apariencia y accesibilidad
+
+- **Paleta**: "tinta y musgo" — neutros cálidos con dos acentos minerales
+  (musgo profundo y arcilla quemada), en vez de la típica paleta
+  azul/teal de sitios SaaS. Todo el color vive en variables CSS
+  (`static/css/edunova.css`), con un set paralelo para modo oscuro.
+- **Modo oscuro**: botón flotante abajo a la derecha, presente en todas
+  las páginas (incluido login). Tres opciones: Claro / Oscuro / Auto
+  (sigue la preferencia del sistema operativo). Se guarda en
+  `localStorage` y se aplica antes de pintar la página para evitar el
+  parpadeo del tema por defecto.
+- **Accesibilidad**: mismo botón flotante, con tamaño de texto (A / A+ /
+  A++), alto contraste, subrayado de enlaces y reducción de animaciones.
+  También persiste entre visitas.
+
+Si agregan una plantilla nueva, mientras extienda de `base.html` el botón
+de accesibilidad y el modo oscuro funcionan solos — no hay que repetir
+nada. Para que cualquier color nuevo respete el modo oscuro, usar las
+variables de `edunova.css` (`var(--tinta)`, `var(--rio)`, etc.) en vez de
+colores fijos.
 
 ## Estructura del proyecto
 
@@ -50,15 +82,33 @@ templates/          # todas las plantillas, organizadas por app
 static/css/         # tokens de diseño (paleta, tipografía) que Tailwind CDN no cubre
 ```
 
+## Roles del sistema
+
+- **docente** y **apoderado**: los únicos que se pueden crear desde el
+  registro público del sitio.
+- **administrativo**: directores y encargados de asignar cursos,
+  evaluaciones, reuniones, etc. No está en el formulario de registro
+  público — se crea desde `/admin/` por un `administrador`. Tiene su
+  propio home (misma estética que docente/apoderado) con:
+  listado y creación rápida de cursos, asignación de docente jefe,
+  calendario mensual del colegio completo, y formulario para agendar
+  evaluaciones/reuniones/clases en cualquier curso.
+- **administrador**: rol para quienes desarrollamos y administramos el
+  sitio (no para el colegio) — el acceso técnico vía `/admin/`. Se asigna
+  automáticamente al correr `createsuperuser` y no puede elegirse de
+  ninguna otra forma (el manager de `Usuario` lo fuerza). Al iniciar sesión
+  se le redirige directo a `/admin/`.
+
 ## Decisiones tomadas sobre el esquema original
 
-- **Login por RUT**: se usa `rut` como identificador de acceso en vez de un
-  username genérico o el email, ya que es lo natural para usuarios chilenos.
-- **Solo 2 roles activos** (`docente`, `apoderado`): el modelo `Usuario`
-  contempla `funcionario` en el enum de roles pero no se expone en el
-  registro ni en las vistas, para no construir sobre un supuesto que aún no
-  se confirma con el cliente. Reactivarlo es agregar el valor al
-  `ROLES_ACTIVOS` en `usuarios/models.py` y crear su vista de home.
+- **Login por RUT**: `Usuario.USERNAME_FIELD = 'rut'`, en vez de un
+  username genérico o el email, ya que es lo natural para usuarios
+  chilenos. Esto requirió un manager propio (`UsuarioManager`) porque el
+  `UserManager` por defecto de Django asume un parámetro literalmente
+  llamado `username`.
+- **Solo 2 roles en el registro público** (`docente`, `apoderado`): ver
+  sección "Roles del sistema" arriba para el detalle de `administrativo` y
+  `administrador`.
 - **Modelo `Evento` (nuevo, sugerido)**: el esquema original no traía ninguna
   tabla para alimentar un calendario de clases/evaluaciones/reuniones, así
   que se agregó en `academico/models.py`. Es lo que llena el calendario en
@@ -87,7 +137,11 @@ static/css/         # tokens de diseño (paleta, tipografía) que Tailwind CDN n
 - **Exportar reportes**: un botón para descargar la asistencia u
   observaciones del estudiante en PDF sería un plus fácil de vender a un
   colegio o escuela de lenguaje.
+- **Comunicados desde Administrativo**: hoy el botón "Nuevo comunicado" se
+  oculta para este rol porque el formulario de comunicados solo sabe
+  armar las opciones de destinatario/curso para docente y apoderado. Si
+  quieren que dirección también pueda enviar comunicados (por ejemplo a
+  todo el colegio), hay que extender `ComunicadoForm` para ese caso.
 - Cuando definan si el cliente final es el colegio o la escuela de lenguaje,
-  conviene revisar si necesitan el rol `funcionario` (secretaría) para cargar
-  matrículas o gestionar comunicados masivos — el modelo ya está listo para
-  activarlo.
+  conviene revisar quién tendrá cuentas `administrativo` en la práctica
+  (¿la dirección?, ¿UTP?) para afinar los permisos de ese panel.
