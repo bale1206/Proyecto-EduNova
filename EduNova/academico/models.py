@@ -5,7 +5,8 @@ Usuario = settings.AUTH_USER_MODEL
 
 
 class Curso(models.Model):
-    grado_curso = models.CharField('Curso', max_length=50)
+    nivel = models.CharField('Nivel', max_length=50) # Ej: '1° Básico', '2° Medio'
+    letra = models.CharField('Letra', max_length=1)  # Ej: 'A', 'B'
     docente_jefe = models.ForeignKey(
         Usuario, on_delete=models.SET_NULL, null=True, blank=True,
         related_name='cursos_a_cargo',
@@ -13,12 +14,12 @@ class Curso(models.Model):
     )
 
     def __str__(self):
-        return self.grado_curso
+        return f"{self.nivel} {self.letra}"
 
     class Meta:
         verbose_name = 'Curso'
         verbose_name_plural = 'Cursos'
-        ordering = ['grado_curso']
+        ordering = ['nivel', 'letra']
 
 
 class Estudiante(models.Model):
@@ -29,7 +30,6 @@ class Estudiante(models.Model):
         Usuario, on_delete=models.CASCADE, related_name='estudiantes_a_cargo',
         limit_choices_to={'rol': 'apoderado'},
     )
-    # Apellido paterno del alumno, usado para agrupar hermanos como "Familia X"
     apellido_familiar = models.CharField(max_length=50, blank=True)
 
     def save(self, *args, **kwargs):
@@ -42,11 +42,24 @@ class Estudiante(models.Model):
     def __str__(self):
         return self.nombre_completo
 
+    # Método que calcula la asistencia 
+    @property
+    def porcentaje_asistencia(self):
+        total_clases = self.asistencias.count()
+        if total_clases == 0:
+            return 100.00 
+        
+        
+        dias_asistidos = self.asistencias.filter(
+            estado__in=[Asistencia.Estado.PRESENTE, Asistencia.Estado.ATRASO, Asistencia.Estado.JUSTIFICADO]
+        ).count()
+        
+        return round((dias_asistidos / total_clases) * 100, 2)
+
     class Meta:
         verbose_name = 'Estudiante'
         verbose_name_plural = 'Estudiantes'
         ordering = ['nombre_completo']
-
 
 class Asistencia(models.Model):
     class Estado(models.TextChoices):
@@ -57,7 +70,7 @@ class Asistencia(models.Model):
 
     estudiante = models.ForeignKey(Estudiante, on_delete=models.CASCADE, related_name='asistencias')
     fecha = models.DateField()
-    porcentaje_asistencia_actual = models.DecimalField(max_digits=5, decimal_places=2, default=100)
+    
     estado = models.CharField(max_length=20, choices=Estado.choices, default=Estado.PRESENTE)
     registrado_por = models.ForeignKey(Usuario, on_delete=models.SET_NULL, null=True, related_name='asistencias_registradas')
 

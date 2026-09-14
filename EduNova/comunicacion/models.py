@@ -37,11 +37,6 @@ class MensajeComunicacion(models.Model):
     exige_recibo_lectura = models.BooleanField(default=False)
     fecha_hora_envio = models.DateTimeField(auto_now_add=True)
 
-    # Campos de apoyo para la campana de notificaciones (no venían en el
-    # esquema original pero son necesarios para saber qué está "sin leer").
-    leido = models.BooleanField(default=False)
-    fecha_lectura = models.DateTimeField(null=True, blank=True)
-
     class Meta:
         verbose_name = 'Mensaje / Comunicado'
         verbose_name_plural = 'Mensajes / Comunicados'
@@ -54,3 +49,19 @@ class MensajeComunicacion(models.Model):
 
     def __str__(self):
         return f"[{self.folio}] {self.asunto}"
+
+
+class LecturaMensaje(models.Model):
+    mensaje = models.ForeignKey(MensajeComunicacion, on_delete=models.CASCADE, related_name='lecturas')
+    destinatario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='registro_lecturas')
+    leido = models.BooleanField(default=False)
+    fecha_hora_lectura = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Registro de Lectura'
+        verbose_name_plural = 'Registros de Lecturas'
+        unique_together = ['mensaje', 'destinatario']
+
+    def __str__(self):
+        estado = "Leído" if self.leido else "No leído"
+        return f"{self.destinatario} - {self.mensaje.folio} ({estado})"
