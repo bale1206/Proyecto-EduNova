@@ -1,7 +1,5 @@
 from django import forms
-
 from usuarios.models import Usuario
-
 from .models import Curso, Evento
 
 INPUT_CLASSES = (
@@ -14,8 +12,8 @@ INPUT_STYLE = 'border-color: var(--linea);'
 class CursoForm(forms.ModelForm):
     class Meta:
         model = Curso
-        fields = ['grado_curso', 'docente_jefe']
-        labels = {'grado_curso': 'Curso', 'docente_jefe': 'Docente jefe'}
+        fields = ['nivel', 'letra', 'docente_jefe']
+        labels = {'nivel': 'Nivel', 'letra': 'Letra', 'docente_jefe': 'Docente jefe'}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

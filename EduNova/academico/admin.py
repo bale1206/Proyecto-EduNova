@@ -5,7 +5,7 @@ from .models import Asistencia, Curso, Estudiante, Evento, JustificacionRetiro, 
 
 @admin.register(Curso)
 class CursoAdmin(admin.ModelAdmin):
-    list_display = ('grado_curso', 'docente_jefe')
+    list_display = ('nivel', 'letra', 'docente_jefe')
 
 
 @admin.register(Estudiante)
@@ -17,7 +17,7 @@ class EstudianteAdmin(admin.ModelAdmin):
 
 @admin.register(Asistencia)
 class AsistenciaAdmin(admin.ModelAdmin):
-    list_display = ('estudiante', 'fecha', 'estado', 'porcentaje_asistencia_actual')
+    list_display = ('estudiante', 'fecha', 'estado')
     list_filter = ('estado', 'fecha')
 
 
